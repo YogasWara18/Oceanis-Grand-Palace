@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--Arimo-font);
+}
+
+:root {
+    --primary-color: #35c8c0;
+    --prim-light: #eafbfb;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #c5a45f;
+    --secondary-color: #2ad4aa;
+    --text-light: #c5b379;
+    --Oswald-font: "Oswald", sans-serif;
+    --Arimo-font: "Arimo", sans-serif;
+
+    --transition-regular: .3s;
+    --transition-slow: .6s;
+}
