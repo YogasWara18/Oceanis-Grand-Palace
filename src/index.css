@@ -14,16 +14,20 @@
 }
 
 :root {
-    --primary-color: #35c8c0;
+    --primary-color: #36c6c2;
     --prim-light: #eafbfb;
     --white-color: #fff;
     --black-color: #000;
     --text-color: #c5a45f;
     --secondary-color: #2ad4aa;
-    --text-light: #c5b379;
+    --text-light: #bea15d;
     --Oswald-font: "Oswald", sans-serif;
     --Arimo-font: "Arimo", sans-serif;
 
     --transition-regular: .3s;
     --transition-slow: .6s;
+}
+
+p {
+    color: var(--text-light);
 }
