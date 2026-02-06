@@ -22,34 +22,30 @@ function Nav() {
     <>
       {/* NAVBAR */}
       <nav
-        className={`px-[8%] h-[100px] w-full fixed top-5 left-0 lg:left-10 
-        rounded-2xl lg:w-[95%] flex justify-between items-center z-[9999] 
-        transition-all duration-300 
-        ${isScrolled ? "bg-[#111111] shadow-xl scale-[1.01]" : "bg-white shadow-md"}`}
+        className={`px-[8%] h-[100px] w-full fixed top-5 left-0 lg:left-10 rounded-2xl lg:w-[95%] flex justify-between items-center z-[9999] transition-all duration-300 border border-[#36c6c2] 
+    ${
+      isScrolled
+        ? "bg-[#111111] shadow-2xl scale-[1.01] border-opacity-70"
+        : "bg-white shadow-md border-opacity-40"
+    } 
+    hover:shadow-[0_8px_30px_rgba(54,198,194,0.4)]`}
       >
         <Link to="/">
           <img
             src="/Logo-Oceanis.png"
             alt="Oceanis Hotel Logo"
-            className="h-[90px] w-auto object-contain transition-transform duration-300 hover:scale-105 -translate-y-3"
+            className="h-[90px] w-auto object-contain transition-transform duration-300 hover:scale-105"
           />
         </Link>
 
         {/* Menu Navbar */}
         <ul
-          className={`menu flex-col lg:flex-row lg:flex absolute lg:static top-full left-0 
-  w-full lg:w-auto bg-white md:pl-5 md:py-4 lg:bg-transparent z-50 
-  transition-all duration-300 ease-in-out overflow-hidden 
-  ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"} 
-  lg:max-h-full lg:opacity-100 gap-10 text-sm font-medium font-oswald`}
+          className={`menu flex-col lg:flex-row lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white md:pl-5 md:py-4 lg:bg-transparent z-50 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"} lg:max-h-full lg:opacity-100 gap-10 text-sm font-medium font-oswald`}
         >
           <li>
             <Link
               to="/"
-              className="group relative uppercase text-base opacity-70 md:opacity-100 
-      transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 
-      hover:scale-110 hover:text-transparent hover:bg-clip-text 
-      hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
+              className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               Home
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-[#36c6c2] to-[#36c6c2] transition-all duration-300 group-hover:w-full"></span>
@@ -59,10 +55,7 @@ function Nav() {
           <li>
             <Link
               to="/"
-              className="group relative uppercase text-base opacity-70 md:opacity-100 
-      transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 
-      hover:scale-110 hover:text-transparent hover:bg-clip-text 
-      hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
+              className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               About
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-[#36c6c2] to-[#36c6c2] transition-all duration-300 group-hover:w-full"></span>
@@ -72,10 +65,7 @@ function Nav() {
           <li>
             <Link
               to="/"
-              className="group relative uppercase text-base opacity-70 md:opacity-100 
-      transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 
-      hover:scale-110 hover:text-transparent hover:bg-clip-text 
-      hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
+              className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               Services
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-[#36c6c2] to-[#36c6c2] transition-all duration-300 group-hover:w-full"></span>
@@ -85,10 +75,7 @@ function Nav() {
           <li>
             <Link
               to="/"
-              className="group relative uppercase text-base opacity-70 md:opacity-100 
-      transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 
-      hover:scale-110 hover:text-transparent hover:bg-clip-text 
-      hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
+              className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               Rooms
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-[#36c6c2] to-[#36c6c2] transition-all duration-300 group-hover:w-full"></span>
@@ -98,10 +85,7 @@ function Nav() {
           <li>
             <Link
               to="/"
-              className="group relative uppercase text-base opacity-70 md:opacity-100 
-      transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 
-      hover:scale-110 hover:text-transparent hover:bg-clip-text 
-      hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
+              className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               Blog
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-[#36c6c2] to-[#36c6c2] transition-all duration-300 group-hover:w-full"></span>
@@ -111,10 +95,7 @@ function Nav() {
           <li>
             <Link
               to="/"
-              className="group relative uppercase text-base opacity-70 md:opacity-100 
-      transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 
-      hover:scale-110 hover:text-transparent hover:bg-clip-text 
-      hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
+              className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               Contact
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-gradient-to-r from-[#36c6c2] to-[#36c6c2] transition-all duration-300 group-hover:w-full"></span>
@@ -139,17 +120,18 @@ function Nav() {
           </button>
 
           {/* Mobile Menu Toggle */}
-          <div className="lg:hidden block">
-            <button onClick={() => setIsOpen(!isOpen)}>
+          <div className="lg:hidden flex justify-center items-center w-full">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-3 rounded-full transition-all duration-300 hover:bg-gradient-to-r hover:from-[var(--primary-color)] hover:to-[var(--secondary-color)] hover:text-white focus:bg-gradient-to-r focus:from-[var(--primary-color)] focus:to-[var(--secondary-color)] focus:text-white active:scale-105 shadow-md"
+            >
               <i
-                className={`ri-menu-line text-4xl transition ${
-                  isOpen ? "hidden" : "block"
-                }`}
+                className={`ri-menu-line text-4xl transition 
+      ${isOpen ? "hidden" : "block"}`}
               ></i>
               <i
-                className={`ri-close-line text-4xl transition ${
-                  isOpen ? "block" : "hidden"
-                }`}
+                className={`ri-close-line text-4xl transition 
+      ${isOpen ? "block" : "hidden"}`}
               ></i>
             </button>
           </div>
@@ -186,13 +168,13 @@ function Nav() {
                     className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none shadow-inner transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
                     dateFormat="dd/MM/yyyy"
                   />
-                 
                 </div>
 
                 {/* Check-out */}
                 <div>
                   <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
-                    <i className="ri-calendar-event-line text-[#36c6c2]"></i> Check-Out
+                    <i className="ri-calendar-event-line text-[#36c6c2]"></i>{" "}
+                    Check-Out
                   </label>
                   <DatePicker
                     selected={checkOutDate}
@@ -206,7 +188,7 @@ function Nav() {
                 {/* Adults */}
                 <div>
                   <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
-                   <i className="ri-user-line text-[#36c6c2]"></i> Adults
+                    <i className="ri-user-line text-[#36c6c2]"></i> Adults
                   </label>
                   <input
                     type="number"
