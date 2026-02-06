@@ -40,7 +40,7 @@ function Nav() {
 
         {/* Menu Navbar */}
         <ul
-          className={`menu flex-col lg:flex-row lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white md:pl-5 md:py-4 lg:bg-transparent z-50 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"} lg:max-h-full lg:opacity-100 gap-10 text-sm font-medium font-oswald`}
+          className={`menu flex-col lg:flex-row lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white md:pl-5 md:py-4 lg:bg-transparent z-50 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"} lg:max-h-full lg:opacity-100 gap-10 text-sm font-medium font-oswald leading-loose`}
         >
           <li>
             <Link
@@ -123,7 +123,7 @@ function Nav() {
           <div className="lg:hidden flex justify-center items-center w-full">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-3 rounded-full transition-all duration-300 hover:bg-gradient-to-r hover:from-[var(--primary-color)] hover:to-[var(--secondary-color)] hover:text-white focus:bg-gradient-to-r focus:from-[var(--primary-color)] focus:to-[var(--secondary-color)] focus:text-white active:scale-105 shadow-md"
+              className="p-1 rounded-full transition-all duration-300 hover:bg-gradient-to-r hover:from-[var(--primary-color)] hover:to-[var(--secondary-color)] hover:text-white focus:bg-gradient-to-r focus:from-[var(--primary-color)] focus:to-[var(--secondary-color)] focus:text-white active:scale-105 shadow-md"
             >
               <i
                 className={`ri-menu-line text-4xl transition 
