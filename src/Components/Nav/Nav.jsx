@@ -9,7 +9,7 @@ function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [checkInDate, setIsDate] = useState(null);
+  const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
 
   useEffect(() => {
@@ -31,9 +31,7 @@ function Nav() {
           <img
             src="/Logo-Oceanis.png"
             alt="Oceanis Hotel Logo"
-            width={90}
-            height={60}
-            className="object-contain transition-transform duration-300 hover:scale-105"
+            className="h-[90px] w-auto object-contain transition-transform duration-300 hover:scale-105 -translate-y-3"
           />
         </Link>
 
@@ -129,7 +127,7 @@ function Nav() {
           <button
             onClick={() => setIsModalOpen(true)}
             className="btn custom-btn bg-[#bea15d] flex items-center 
-            lg:py-4 lg:px-2 py-4 px-4 rounded-full gap-3 text-white uppercase tracking-widest 
+            lg:py-4 lg:px-3 py-4 px-4 rounded-full gap-3 text-white uppercase tracking-widest 
             shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300"
           >
             <img
@@ -137,7 +135,7 @@ function Nav() {
               alt="bookmark"
               className="invert brightness-0"
             />
-            <span className="hidden lg:block">Reservation Now</span>
+            <span className="hidden lg:block">Reservation</span>
           </button>
 
           {/* Mobile Menu Toggle */}
@@ -156,6 +154,79 @@ function Nav() {
             </button>
           </div>
         </div>
+
+        {/* Modal Form */}
+        {isModalOpen && (
+          <div className="fixed inset-0 z-[999] flex items-center justify-center bg-[rgba(32,79,94,.85)] backdrop-blur-sm">
+            <div className="bg-white w-full max-w-md p-8 rounded-2xl shadow-2xl relative transition-transform duration-500 hover:scale-[1.02] hover:shadow-[0_10px_40px_rgba(54,198,194,0.4)]">
+              {/* Close Button */}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-4 right-4 rounded-full w-10 h-10 flex items-center justify-center text-lg text-black font-bold bg-[#eafbfb] shadow-md transition-all duration-300 hover:bg-gradient-to-r hover:from-[#bea15d] hover:to-[#bea15d] hover:text-white hover:shadow-lg hover:rotate-90"
+              >
+                <span className="bi bi-x-lg"></span>
+              </button>
+
+              {/* Title */}
+              <h2 className="text-2xl font-semibold mb-8 text-[#204f5e] tracking-wide text-center">
+                <i className="ri-search-line mr-2 text-[#36c6c2]"></i> Search
+              </h2>
+
+              {/* Form */}
+              <form className="space-y-6">
+                {/* Check-in */}
+                <div>
+                  <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
+                    <i className="ri-calendar-line text-[#36c6c2]"></i> Check-in
+                  </label>
+                  <DatePicker
+                    selected={checkInDate}
+                    onChange={(date) => setCheckInDate(date)}
+                    placeholderText="Select Check-in date"
+                    className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none shadow-inner transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
+                    dateFormat="dd/MM/yyyy"
+                  />
+                 
+                </div>
+
+                {/* Check-out */}
+                <div>
+                  <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
+                    <i className="ri-calendar-event-line text-[#36c6c2]"></i> Check-Out
+                  </label>
+                  <DatePicker
+                    selected={checkOutDate}
+                    onChange={(date) => setCheckOutDate(date)}
+                    placeholderText="Select Check-out date"
+                    className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none shadow-inner transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
+                    dateFormat="dd/MM/yyyy"
+                  />
+                </div>
+
+                {/* Adults */}
+                <div>
+                  <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
+                   <i className="ri-user-line text-[#36c6c2]"></i> Adults
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="0"
+                    min="1"
+                    className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-[#bea15d] to-[#bea15d] text-white py-3 px-5 rounded-full w-full uppercase tracking-widest font-semibold shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105"
+                >
+                  Search Now
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
       </nav>
     </>
   );
