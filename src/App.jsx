@@ -1,21 +1,16 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './Components/Nav/Nav';
-
+import Index from '../src/Components/Pages/Index';
 
 function App() {
- 
-
   return (
-   <>
-   <Router>
-    <Nav/>
-    <Routes>
-      <Route></Route>
-    </Routes>
-   </Router>
-   </>
-  )
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Index />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

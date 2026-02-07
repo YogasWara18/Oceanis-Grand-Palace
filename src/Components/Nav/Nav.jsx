@@ -54,7 +54,7 @@ function Nav() {
 
           <li>
             <Link
-              to="/"
+              to="/about"
               className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               About
@@ -64,7 +64,7 @@ function Nav() {
 
           <li>
             <Link
-              to="/"
+              to="/services"
               className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               Services
@@ -74,7 +74,7 @@ function Nav() {
 
           <li>
             <Link
-              to="/"
+              to="/rooms"
               className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               Rooms
@@ -84,7 +84,7 @@ function Nav() {
 
           <li>
             <Link
-              to="/"
+              to="/blog"
               className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               Blog
@@ -94,7 +94,7 @@ function Nav() {
 
           <li>
             <Link
-              to="/"
+              to="/contact"
               className="group relative uppercase text-base opacity-70 md:opacity-100 transition-all duration-300 px-4 py-2 lg:px-0 lg:py-0 hover:scale-110 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#36c6c2] hover:to-[#36c6c2]"
             >
               Contact
@@ -156,33 +156,37 @@ function Nav() {
 
               {/* Form */}
               <form className="space-y-6">
-                {/* Check-in */}
-                <div>
-                  <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
-                    <i className="ri-calendar-line text-[#36c6c2]"></i> Check-in
-                  </label>
-                  <DatePicker
-                    selected={checkInDate}
-                    onChange={(date) => setCheckInDate(date)}
-                    placeholderText="Select Check-in date"
-                    className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none shadow-inner transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
-                    dateFormat="dd/MM/yyyy"
-                  />
-                </div>
+                {/* Check-in & Check-out */}
+                <div className="flex gap-6 w-full">
+                  {/* Check-in */}
+                  <div className="flex-1">
+                    <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
+                      <i className="ri-calendar-line text-[#36c6c2]"></i>{" "}
+                      Check-in
+                    </label>
+                    <DatePicker
+                      selected={checkInDate}
+                      onChange={(date) => setCheckInDate(date)}
+                      placeholderText="Select Check-in date"
+                      className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none shadow-inner transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
+                      dateFormat="dd/MM/yyyy"
+                    />
+                  </div>
 
-                {/* Check-out */}
-                <div>
-                  <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
-                    <i className="ri-calendar-event-line text-[#36c6c2]"></i>{" "}
-                    Check-Out
-                  </label>
-                  <DatePicker
-                    selected={checkOutDate}
-                    onChange={(date) => setCheckOutDate(date)}
-                    placeholderText="Select Check-out date"
-                    className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none shadow-inner transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
-                    dateFormat="dd/MM/yyyy"
-                  />
+                  {/* Check-out */}
+                  <div className="flex-1">
+                    <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
+                      <i className="ri-calendar-event-line text-[#36c6c2]"></i>{" "}
+                      Check-Out
+                    </label>
+                    <DatePicker
+                      selected={checkOutDate}
+                      onChange={(date) => setCheckOutDate(date)}
+                      placeholderText="Select Check-out date"
+                      className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none shadow-inner transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
+                      dateFormat="dd/MM/yyyy"
+                    />
+                  </div>
                 </div>
 
                 {/* Adults */}
