@@ -25,7 +25,7 @@ function Nav() {
         className={`px-[8%] h-[100px] w-full fixed top-5 left-0 lg:left-10 rounded-2xl lg:w-[95%] flex justify-between items-center z-[9999] transition-all duration-300 border border-[#36c6c2] 
     ${
       isScrolled
-        ? "bg-[#111111] shadow-2xl scale-[1.01] border-opacity-70"
+        ? "bg-[#111111] text-white shadow-2xl scale-[1.01] border-opacity-70"
         : "bg-white shadow-md border-opacity-40"
     } 
     hover:shadow-[0_8px_30px_rgba(54,198,194,0.4)]`}
@@ -146,7 +146,7 @@ function Nav() {
                 onClick={() => setIsModalOpen(false)}
                 className="absolute top-4 right-4 rounded-full w-10 h-10 flex items-center justify-center text-lg text-black font-bold bg-[#eafbfb] shadow-md transition-all duration-300 hover:bg-gradient-to-r hover:from-[#bea15d] hover:to-[#bea15d] hover:text-white hover:shadow-lg hover:rotate-90"
               >
-                <span className="bi bi-x-lg"></span>
+                <i className="bi bi-x-lg"></i>
               </button>
 
               {/* Title */}
