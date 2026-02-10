@@ -9,12 +9,12 @@ import service2 from "../../assets/Service2.png";
 import service3 from "../../assets/Service3.png";
 import service4 from "../../assets/Service4.png";
 
-import feature1 from "../../assets/feature-icon-1.svg";
-import feature2 from "../../assets/feature-icon-2.svg";
-import feature3 from "../../assets/feature-icon-3.svg";
-import feature4 from "../../assets/feature-icon-4.svg";
-import feature5 from "../../assets/feature-icon-5.svg";
-import feature6 from "../../assets/feature-icon-6.svg";
+import feature1 from "../../assets/feature1.png";
+import feature2 from "../../assets/feature2.png";
+import feature3 from "../../assets/feature3.png";
+import feature4 from "../../assets/feature4.png";
+import feature5 from "../../assets/feature5.png";
+import feature6 from "../../assets/feature6.png";
 
 import element1 from "../../assets/Element1.png";
 import element2 from "../../assets/Element2.png";
@@ -142,7 +142,7 @@ function Index() {
             className="rounded-full px-6 py-2 font-bricolage tracking-wider text-sm uppercase 
                  bg-[var(--prim-light)] text-[var(--text-color)] shadow-md"
           >
-            Luxury Services at Oceanis Grand Palace
+            Services at Oceanis Grand Palace
           </span>
           <h1
             className="text-5xl font-oswald font-semibold 
@@ -226,6 +226,162 @@ function Index() {
             >
               Luxury Water Sports by Oceanis
             </span>
+          </div>
+        </div>
+
+        <div className="service-bottom  w-full flex lg:flex-row flex-col justify-between items-center gap-5">
+          <p className="lg:w-1/2 text-lg leading-relaxed text-[#204f5e]">
+            Oceanis Grand Palace delivers exclusive service, attentive
+            hospitality, and professional care, ensuring every guest experiences
+            comfort, satisfaction, and distinction.
+          </p>
+          <button
+            className="w-[220px] h-[60px] 
+               bg-[var(--text-light)] 
+               hover:bg-[var(--text-color)] 
+               transition-transform duration-500 ease-in-out 
+               rounded-full text-white uppercase tracking-[2px] 
+               shadow-lg hover:shadow-xl 
+               hover:scale-105 hover:drop-shadow-lg"
+          >
+            Discover Luxury
+          </button>
+        </div>
+      </div>
+
+      <div className="features relative w-full bg-[#f9f9f9] lg:px-[12%] px-[8%] py-[100px] overflow-hidden">
+        {/* Section Title */}
+        <div className="section-title text-center mb-20">
+          <span
+            className="rounded-full px-6 py-2 font-bricolage tracking-wider text-sm uppercase 
+                     bg-[var(--prim-light)] text-[var(--text-color)] shadow-md"
+          >
+            Oceanis Highlights
+          </span>
+          <h1
+            className="mt-6 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
+                   drop-shadow-[0_2px_6px_var(--prim-light)] 
+                   [text-shadow:1px_1px_0_var(--text-color)]"
+          >
+            Unveiling Excellence in Every Detail
+          </h1>
+        </div>
+
+        {/* Features Showcase */}
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+          {/* Feature Item */}
+          <div className="relative group rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={feature1}
+              alt="Beachfront"
+              className="w-full h-auto object-contain mx-auto transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 via-black/30 to-transparent 
+                      text-center p-5 transition-opacity duration-500 group-hover:from-black/40"
+            >
+              <h3 className="text-xl font-semibold text-white">
+                Pristine Beachfront
+              </h3>
+              <p className="text-gray-200 text-xs mt-1 max-w-[85%] mx-auto">
+                White sands, clear waters, and romantic sunsets.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative group rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={feature2}
+              alt="Infinity Pool"
+              className="w-full h-auto object-contain mx-auto transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 via-black/30 to-transparent 
+                      text-center p-5 transition-opacity duration-500 group-hover:from-black/40"
+            >
+              <h3 className="text-xl font-semibold text-white">
+                Infinity Pool Oasis
+              </h3>
+              <p className="text-gray-200 text-xs mt-1 max-w-[85%] mx-auto">
+                Panoramic views and luxurious leisure.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative group rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={feature3}
+              alt="Fine Dining"
+              className="w-full h-auto object-contain mx-auto transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 via-black/30 to-transparent 
+                      text-center p-5 transition-opacity duration-500 group-hover:from-black/40"
+            >
+              <h3 className="text-xl font-semibold text-white">
+                Fine Dining Excellence
+              </h3>
+              <p className="text-gray-200 text-xs mt-1 max-w-[85%] mx-auto">
+                Gourmet cuisine with global and local flavors.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative group rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={feature4}
+              alt="Spa Retreat"
+              className="w-full h-auto object-contain mx-auto transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 via-black/30 to-transparent 
+                      text-center p-5 transition-opacity duration-500 group-hover:from-black/40"
+            >
+              <h3 className="text-xl font-semibold text-white">
+                Exclusive Spa Retreat
+              </h3>
+              <p className="text-gray-200 text-xs mt-1 max-w-[85%] mx-auto">
+                Holistic treatments for body, mind, and spirit.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative group rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={feature5}
+              alt="Ballroom"
+              className="w-full h-auto object-contain mx-auto transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 via-black/30 to-transparent 
+                      text-center p-5 transition-opacity duration-500 group-hover:from-black/40"
+            >
+              <h3 className="text-xl font-semibold text-white">
+                Grand Ballroom & Events
+              </h3>
+              <p className="text-gray-200 text-xs mt-1 max-w-[85%] mx-auto">
+                Elegant venues for weddings and celebrations.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative group rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={feature6}
+              alt="Ballroom"
+              className="w-full h-auto object-contain mx-auto transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              className="absolute bottom-0 w-full bg-gradient-to-t from-black/60 via-black/30 to-transparent 
+                      text-center p-5 transition-opacity duration-500 group-hover:from-black/40"
+            >
+              <h3 className="text-xl font-semibold text-white">
+                Personal Service
+              </h3>
+              <p className="text-gray-200 text-xs mt-1 max-w-[85%] mx-auto">
+                Exceptional care, always delivered.
+              </p>
+            </div>
           </div>
         </div>
       </div>
