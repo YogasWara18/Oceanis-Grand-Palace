@@ -20,9 +20,42 @@ import element1 from "../../assets/Element1.png";
 import element2 from "../../assets/Element2.png";
 import element3 from "../../assets/Element3.png";
 
+import RoomsData from "../../Rooms.json";
+
+import aboutImg from "../../assets/About-Image.png";
+
+import avatar1 from "../../assets/Review1.png";
+import avatar2 from "../../assets/Review2.png";
+import avatar3 from "../../assets/Review3.png";
+import avatar4 from "../../assets/Review4.png";
+import avatar5 from "../../assets/Review5.png";
+import avatar6 from "../../assets/Review6.png";
+import avatar7 from "../../assets/Review7.png";
+
+import blog1 from "../../assets/Blog1.png";
+import blog2 from "../../assets/Blog2.png";
+import blog3 from "../../assets/Blog3.png";
+import blog4 from "../../assets/Blog4.png";
+import { div } from "framer-motion/client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 function Index() {
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const [activeTab, setActiveTab] = useState("All");
+
+  const tabs = ["All", "Economy", "Standard", "Luxury"];
+
+  const filteredRooms =
+    activeTab === "All"
+      ? RoomsData
+      : RoomsData.filter((room) => room.type === activeTab);
 
   return (
     <>
@@ -263,7 +296,7 @@ function Index() {
                    drop-shadow-[0_2px_6px_var(--prim-light)] 
                    [text-shadow:1px_1px_0_var(--text-color)]"
           >
-            Unveiling Excellence in Every Detail
+            ”Unveiling Excellence in Every Detail”
           </h1>
         </div>
 
@@ -383,6 +416,99 @@ function Index() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="py-[80px]">
+        <div className="section-title text-center mb-20">
+          <span
+            className="rounded-full px-6 py-2 font-bricolage tracking-wider text-sm uppercase 
+                     bg-[var(--prim-light)] text-[var(--text-color)] shadow-md"
+          >
+            Oceanis Rooms
+          </span>
+          <h1
+            className="mt-6 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
+                   drop-shadow-[0_2px_6px_var(--prim-light)] 
+                   [text-shadow:1px_1px_0_var(--text-color)]"
+          >
+            ”Elegance and serenity in every room”
+          </h1>
+        </div>
+      </div>
+
+      <div className="w-100 lg:px-[12%] px-[8%] pb-[100px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {filteredRooms.map((rooms) => (
+            <div
+              key={rooms.id}
+              className="show-rooms rounded-2xl overflow-hidden flex flex-col 
+                   bg-[rgba(255,255,255,0.65)] backdrop-blur-xl 
+                   border border-[var(--primary-color)] 
+                   shadow-lg transition-all duration-500 
+                   hover:shadow-2xl hover:border-[var(--text-light)]"
+            >
+              {/* Image Slider */}
+              <div className="relative">
+                <Swiper
+                  modules={[Pagination]}
+                  pagination={{ clickable: true }}
+                  className="w-full h-[280px]"
+                >
+                  {rooms.photos.map((photo, index) => (
+                    <SwiperSlide key={index}>
+                      <img
+                        src={photo}
+                        alt={`${rooms.title} ${index + 1}`}
+                        className="w-full h-[280px] object-cover transition-opacity duration-500 hover:opacity-90"
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+
+              {/* Adults & Size Info Bar */}
+              <div
+                className="bg-[rgba(54,198,194,0.12)] backdrop-blur-md 
+                        border-t border-[var(--primary-color)] 
+                        flex justify-center items-center gap-6 py-3"
+              >
+                <span className="flex items-center gap-2">
+                  <i className="bg-white/80 shadow rounded px-3 py-1 text-sm text-[var(--text-light)]">
+                    Adults : {rooms.adults}
+                  </i>
+                </span>
+                <span className="flex items-center gap-2">
+                  <i className="bg-white/80 shadow rounded px-3 py-1 text-sm text-[var(--text-light)]">
+                    Size : {rooms.size}
+                  </i>
+                </span>
+              </div>
+
+              {/* Content */}
+              <Link to={`/rooms/${rooms.id}`} className="flex-1">
+                <div className="px-6 pt-6 pb-6 text-center flex flex-col items-center">
+                  {/* Heading & Description */}
+                  <h3 className="text-2xl font-semibold text-[var(--primary-color)] mb-2 tracking-wide transition-colors duration-300 hover:text-[var(--text-light)]">
+                    {rooms.title}
+                  </h3>
+                  <p className="text-md text-[var(--text-light)] max-w-[80%] mx-auto leading-relaxed mb-6">
+                    {rooms.description}
+                  </p>
+
+                  {/* Price & Button (menyatu dengan konten) */}
+                  <div className="mt-4 flex items-center justify-between w-full px-2">
+                    <p className="text-xl font-bold text-[var(--text-color)] tracking-wide">
+                      ${rooms.price}
+                    </p>
+                    <button className="w-12 h-12 bg-[var(--primary-color)] rounded-full flex items-center justify-center text-white text-xl shadow-md hover:bg-[var(--text-light)] hover:shadow-lg hover:ring-2 hover:ring-[var(--primary-color)] transition-all duration-300">
+                      <i className="ri-bookmark-line"></i>
+                    </button>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </>

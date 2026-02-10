@@ -4,109 +4,98 @@
     "type": "Economy",
     "title": "Ocean View Chamber",
     "image": "/Rooms/Room1.png",
-    "description": "Kamar sederhana dengan pemandangan laut biru.",
+    "description": "A simple room with a view of the blue ocean.",
     "adults": 2,
     "size": "95 ft²",
-    "price": 49,
-    "photos": ["/Rooms/Room1.png","/Rooms/Room1.png","/Rooms/Room1.png"]
+    "price": 120,
+    "photos": ["/Rooms/Room1.png","/Rooms/Room1-2.png","/Rooms/Room1-3.png"]
   },
   {
     "id": "2",
     "type": "Deluxe",
     "title": "Coral Deluxe Room",
-    "image": "/Rooms/Room2.png",
-    "description": "Kamar elegan dengan dekorasi bertema coral.",
+    "image": "/Rooms/Room2.jpg",
+    "description": "An elegant room with coral-themed décor.",
     "adults": 2,
     "size": "120 ft²",
-    "price": 89,
-    "photos": ["/Rooms/Room2.png","/Rooms/Room2.png","/Rooms/Room2.png"]
+    "price": 130,
+    "photos": ["/Rooms/Room2.jpg","/Rooms/Room2-2.jpg","/Rooms/Room2-3.jpg"]
   },
   {
     "id": "3",
     "type": "Suite",
     "title": "Pearl Grand Suite",
-    "image": "/Rooms/Room3.png",
-    "description": "Suite mewah dengan aksen mutiara dan ruang tamu.",
+    "image": "/Rooms/Room3.jpg",
+    "description": "A luxurious suite with pearl accents and a living area.",
     "adults": 3,
     "size": "200 ft²",
     "price": 159,
-    "photos": ["/Rooms/Room3.png","/Rooms/Room3.png","/Rooms/Room3.png"]
+    "photos": ["/Rooms/Room3.jpg","/Rooms/Room3-2.jpg","/Rooms/Room3-3.jpg"]
   },
   {
     "id": "4",
     "type": "Family",
     "title": "Royal Ocean Family Room",
-    "image": "/Rooms/Room4.png",
-    "description": "Kamar luas untuk keluarga dengan dua kamar tidur.",
+    "image": "/Rooms/Room4.jpg",
+    "description": "A spacious family room with two bedrooms.",
     "adults": 4,
     "size": "250 ft²",
     "price": 199,
-    "photos": ["/Rooms/Room4.png","/Rooms/Room4.png","/Rooms/Room4.png"]
+    "photos": ["/Rooms/Room4.jpg","/Rooms/Room4-2.jpg","/Rooms/Room4-3.jpg"]
   },
   {
     "id": "5",
     "type": "Presidential",
-    "title": "Oceanis Presidential Palace Suite",
-    "image": "/Rooms/Room5.png",
-    "description": "Suite paling premium dengan private pool dan layanan butler.",
+    "title": "Oceanis Presidential Suite",
+    "image": "/Rooms/Room5.jpg",
+    "description": "The most suite with a private pool and butler service.",
     "adults": 2,
     "size": "350 ft²",
     "price": 399,
-    "photos": ["/Rooms/Room5.png","/Rooms/Room5.png","/Rooms/Room5.png"]
+    "photos": ["/Rooms/Room5.jpg","/Rooms/Room5-2.jpg","/Rooms/Room5-3.jpg"]
   },
   {
     "id": "6",
     "type": "Economy",
-    "title": "Seaside Chamber",
-    "image": "/Rooms/Room6.png",
-    "description": "Kamar sederhana dengan akses dekat ke pantai.",
+    "title": "Seaside Chamber Room",
+    "image": "/Rooms/Room6.jpg",
+    "description": "A simple room with easy access to the beach.",
     "adults": 2,
     "size": "90 ft²",
-    "price": 59,
-    "photos": ["/Rooms/Room6.png","/Rooms/Room6.png","/Rooms/Room6.png"]
+    "price": 230,
+    "photos": ["/Rooms/Room6.jpg","/Rooms/Room6-2.jpg","/Rooms/Room6-3.jpg"]
   },
   {
     "id": "7",
     "type": "Deluxe",
-    "title": "Lagoon Deluxe Room",
-    "image": "/Rooms/Room7.png",
-    "description": "Kamar dengan akses langsung ke lagoon pool.",
+    "title": "Lagoon Deluxe Suite Room",
+    "image": "/Rooms/Room7.jpg",
+    "description": "A deluxe room with direct access to the lagoon pool suite.",
     "adults": 2,
     "size": "130 ft²",
-    "price": 109,
-    "photos": ["/Rooms/Room7.png","/Rooms/Room7.png","/Rooms/Room7.png"]
+    "price": 240,
+    "photos": ["/Rooms/Room7.jpg","/Rooms/Room7-2.jpg","/Rooms/Room7-3.jpg"]
   },
   {
     "id": "8",
     "type": "Suite",
     "title": "Horizon Honeymoon Suite",
-    "image": "/Rooms/Room8.png",
-    "description": "Suite romantis dengan pemandangan horizon laut.",
+    "image": "/Rooms/Room8.jpg",
+    "description": "A romantic suite with a breathtaking horizon view of the ocean.",
     "adults": 2,
     "size": "180 ft²",
     "price": 169,
-    "photos": ["/Rooms/Room8.png","/Rooms/Room8.png","/Rooms/Room8.png"]
+    "photos": ["/Rooms/Room8.jpg","/Rooms/Room8-2-v1.jpg","/Rooms/Room8-3.jpg"]
   },
   {
     "id": "9",
-    "type": "Family",
-    "title": "Palace Kids Friendly Room",
-    "image": "/Rooms/Room9.png",
-    "description": "Kamar ramah anak dengan fasilitas bermain.",
-    "adults": 3,
-    "size": "220 ft²",
-    "price": 179,
-    "photos": ["/Rooms/Room9.png","/Rooms/Room9.png","/Rooms/Room9.png"]
-  },
-  {
-    "id": "10",
     "type": "Luxury",
     "title": "Sky Ocean Lounge Suite",
-    "image": "/Rooms/Room10.png",
-    "description": "Suite eksklusif di lantai atas dengan pemandangan 360° laut.",
+    "image": "/Rooms/Room9.jpg",
+    "description": "An exclusive suite on the upper floor with a 360° ocean view.",
     "adults": 2,
     "size": "300 ft²",
     "price": 299,
-    "photos": ["/Rooms/Room10.png","/Rooms/Room10.png","/Rooms/Room10.png"]
+    "photos": ["/Rooms/Room9.jpg","/Rooms/Room9-2.jpg","/Rooms/Room9-3.jpg"]
   }
 ]
