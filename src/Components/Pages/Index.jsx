@@ -136,9 +136,97 @@ function Index() {
         </div>
       </div>
 
-      <div className="service w-full lg:px-[12%] px-[8%] py-[150px] flex items-center justify-center gap-20">
-        <div className="section-title text-center w-full space-y-4">
-          <span className="bg-[#f9f9f9] rounded-full px-5 py-2 font-bricolage tracking-wider text"></span>
+      <div className="service w-full lg:px-[12%] px-[8%] py-[100px] flex flex-col items-center justify-center gap-20">
+        <div className="section-title text-center w-full space-y-6">
+          <span
+            className="rounded-full px-6 py-2 font-bricolage tracking-wider text-sm uppercase 
+                 bg-[var(--prim-light)] text-[var(--text-color)] shadow-md"
+          >
+            Luxury Services at Oceanis Grand Palace
+          </span>
+          <h1
+            className="text-5xl font-oswald font-semibold 
+                 text-[var(--primary-color)] 
+                 drop-shadow-[0_2px_6px_var(--prim-light)] 
+                 [text-shadow:1px_1px_0_var(--text-color)]"
+          >
+            “Crafting Moments of Timeless Elegance”
+          </h1>
+        </div>
+
+        <div className="service-wrapper grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-10 w-full">
+          {/* Service Item */}
+          <div className="service-item relative rounded-lg overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow duration-500">
+            <img
+              src={service1}
+              alt="service-image"
+              className="w-full h-[250px] object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
+            />
+            <span
+              className="absolute bottom-[-50%] left-1/2 transform -translate-x-1/2 
+                 bg-transparent text-center rounded-full py-2 px-4 
+                 text-sm font-oswald font-semibold tracking-widest uppercase 
+                 text-[var(--white-color)] shadow-md w-[90%] max-w-[250px] 
+                 opacity-0 group-hover:opacity-100 group-hover:bottom-1/2 
+                 group-hover:-translate-y-1/2 transition-all duration-500 ease-out"
+            >
+              Oceanis Dive & Discovery
+            </span>
+          </div>
+
+          <div className="service-item relative rounded-lg overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow duration-500">
+            <img
+              src={service2}
+              alt="service-image"
+              className="w-full h-[250px] object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
+            />
+            <span
+              className="absolute bottom-[-50%] left-1/2 transform -translate-x-1/2 
+                 bg-transparent text-center rounded-full py-2 px-4 
+                 text-sm font-oswald font-semibold tracking-widest uppercase 
+                 text-[var(--white-color)] shadow-md w-[90%] max-w-[250px] 
+                 opacity-0 group-hover:opacity-100 group-hover:bottom-1/2 
+                 group-hover:-translate-y-1/2 transition-all duration-500 ease-out"
+            >
+              Oceanis Night of Elegance
+            </span>
+          </div>
+
+          <div className="service-item relative rounded-lg overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow duration-500">
+            <img
+              src={service3}
+              alt="service-image"
+              className="w-full h-[250px] object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
+            />
+            <span
+              className="absolute bottom-[-50%] left-1/2 transform -translate-x-1/2 
+                 bg-transparent text-center rounded-full py-2 px-4 
+                 text-sm font-oswald font-semibold tracking-widest uppercase 
+                 text-[var(--white-color)] shadow-md w-[90%] max-w-[250px] 
+                 opacity-0 group-hover:opacity-100 group-hover:bottom-1/2 
+                 group-hover:-translate-y-1/2 transition-all duration-500 ease-out"
+            >
+              Oceanis Sunset Wellness
+            </span>
+          </div>
+
+          <div className="service-item relative rounded-lg overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow duration-500">
+            <img
+              src={service4}
+              alt="service-image"
+              className="w-full h-[250px] object-cover rounded-lg transition-transform duration-500 group-hover:scale-110"
+            />
+            <span
+              className="absolute bottom-[-50%] left-1/2 transform -translate-x-1/2 
+                 bg-transparent text-center rounded-full py-2 px-4 
+                 text-sm font-oswald font-semibold tracking-widest uppercase 
+                 text-[var(--white-color)] shadow-md w-[90%] max-w-[250px] 
+                 opacity-0 group-hover:opacity-100 group-hover:bottom-1/2 
+                 group-hover:-translate-y-1/2 transition-all duration-500 ease-out"
+            >
+              Luxury Water Sports by Oceanis
+            </span>
+          </div>
         </div>
       </div>
     </>
