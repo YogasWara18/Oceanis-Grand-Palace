@@ -150,8 +150,12 @@ function Nav() {
               </button>
 
               {/* Title */}
-              <h2 className="text-2xl font-semibold mb-8 text-[#204f5e] tracking-wide text-center">
-                <i className="ri-search-line mr-2 text-[#36c6c2]"></i> Search
+              <h2 className="flex justify-center mb-8">
+                <img
+                  src="/Logo-Oceanis.png" 
+                  alt="Oceanis Grand Palace Logo"
+                  className="w-20 h-auto" 
+                />
               </h2>
 
               {/* Form */}
@@ -167,7 +171,7 @@ function Nav() {
                     <DatePicker
                       selected={checkInDate}
                       onChange={(date) => setCheckInDate(date)}
-                      placeholderText="Select Check-in date"
+                      placeholderText="Check-in date"
                       className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none shadow-inner transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
                       dateFormat="dd/MM/yyyy"
                     />
@@ -182,7 +186,7 @@ function Nav() {
                     <DatePicker
                       selected={checkOutDate}
                       onChange={(date) => setCheckOutDate(date)}
-                      placeholderText="Select Check-out date"
+                      placeholderText="Check-out date"
                       className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none shadow-inner transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
                       dateFormat="dd/MM/yyyy"
                     />
@@ -202,12 +206,25 @@ function Nav() {
                   />
                 </div>
 
+                 {/* Rooms */}
+                <div>
+                  <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
+                    <i className="ri-home-2-line text-[#36c6c2]"></i> Rooms
+                  </label>
+                  <input
+                    type="number"
+                    placeholder="0"
+                    min="1"
+                    className="w-full p-3 h-14 bg-[#eafbfb] rounded-lg border border-[#bea15d] outline-none transition-all duration-300 focus:ring-2 focus:ring-[#bea15d] hover:shadow-md"
+                  />
+                </div>
+
                 {/* Submit Button */}
                 <button
                   type="submit"
                   className="bg-gradient-to-r from-[#bea15d] to-[#bea15d] text-white py-3 px-5 rounded-full w-full uppercase tracking-widest font-semibold shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105"
                 >
-                  Search Now
+                  Search
                 </button>
               </form>
             </div>
