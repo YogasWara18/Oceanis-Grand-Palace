@@ -599,6 +599,92 @@ function Index() {
           </div>
         </div>
       </div>
+
+      <div className="about ablout-1 bg-[#f9f9f9] lg:px-[12%] px-[8%] py-[50px] flex items-center flex-col lg:flex-row justify-between gap-20 relative overflow-hidden">
+        <div className="section-title text-start space-y-4 relative z-[9] lg:w-1/2 w-full">
+          <span
+            className="rounded-full px-6 py-2 font-bricolage tracking-wider text-sm uppercase 
+                     bg-[var(--prim-light)] text-[var(--text-color)] shadow-md"
+          >
+            About Oceanis
+          </span>
+          <h1
+            className="mt-6 text-6xl font-oswald font-semibold text-[var(--primary-color)] 
+                   drop-shadow-[0_2px_6px_var(--prim-light)] 
+                   [text-shadow:1px_1px_0_var(--text-color)]"
+          >
+            “Where Grandeur Meets the Ocean”
+          </h1>
+          <ul className="flex flex-col gap-10">
+            {[
+              {
+                num: "01.",
+                title: "Majestic Architecture & Design",
+                desc: "Oceanis Grand Palace is inspired by timeless royal architecture, seamlessly blended with modern elegance. Every arch, pillar, and interior detail reflects grandeur, creating the atmosphere of a palace by the ocean.",
+              },
+              {
+                num: "02.",
+                title: "Grandeur Suites & Exclusive Spaces",
+                desc: "From exclusive suites to magnificent ballrooms, each space is designed to deliver unparalleled luxury. Premium materials, dramatic lighting, and refined layouts emphasize both comfort and sophistication.",
+              },
+              {
+                num: "03.",
+                title: "Ocean Serenity & Scenic Harmony",
+                desc: "Positioned by the sea, the Grand Palace offers breathtaking views and calming ocean sounds. The harmony of waves, sea breeze, and majestic palace ambiance creates a unique sanctuary for the soul.",
+              },
+              {
+                num: "04",
+                title: "Culinary Excellence & Royal Flavors",
+                desc: "Oceanis Grand Palace offers a curated dining experience where world-class chefs blend international cuisine with local delicacies. Each dish is crafted with artistry, premium ingredients, and refined presentation transforming every meal into a royal feast by the ocean."
+              }
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="flex flex-col sm:flex-row gap-1 items-start group"
+              >
+                {/* Nomor urut */}
+                <span className="text-xl font-bold text-[var(--primary-color)] bg-[rgba(255,255,255,0.08)] px-4 py-2 rounded-lg shadow-sm group-hover:shadow-[0_0_15px_var(--primary-color)] transition-all duration-300">
+                  {item.num}
+                </span>
+
+                {/* Konten */}
+                <div>
+                  <h4 className="text-xl md:text-xl font-semibold mb-2 text-[var(--primary-color)] tracking-wide transition-colors duration-300 group-hover:text-[var(--text-light)] [text-shadow:1px_1px_3px_rgba(0,0,0,0.4)]">
+                    {item.title}
+                  </h4>
+                  <p className="text-base md:text-sm text-[#fff] leading-relaxed max-w-[95%] [text-shadow:1px_1px_4px_rgba(0,0,0,0.6)]">
+                    {item.desc}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="lg:w-1/4 w-full">
+          <div className="about-images w-full h-full relative z-[9]">
+            <img
+              src={about1}
+              alt="about-image1"
+              className="about-image about-image1"
+            />
+            <img
+              src={about2}
+              alt="about-image2"
+              className="about-image about-image2"
+            />
+            <img
+              src={about3}
+              alt="about-image3"
+              className="about-image about-image3"
+            />
+            <img
+              src={about4}
+              alt="about-image4"
+              className="about-image about-image4"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 }
