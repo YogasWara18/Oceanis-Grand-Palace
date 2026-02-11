@@ -16,9 +16,10 @@ import feature4 from "../../assets/feature4.png";
 import feature5 from "../../assets/feature5.png";
 import feature6 from "../../assets/feature6.png";
 
-import element1 from "../../assets/Element1.png";
-import element2 from "../../assets/Element2.png";
-import element3 from "../../assets/Element3.png";
+import about1 from "../../assets/About1.png";
+import about2 from "../../assets/About2.png";
+import about3 from "../../assets/About3.png";
+import about4 from "../../assets/About4.png";
 
 import RoomsData from "../../Rooms.json";
 
@@ -63,7 +64,7 @@ function Index() {
         <div className="hero-content w-full max-w-5xl flex flex-col gap-6 z-10 relative">
           {/* Badge */}
           <span
-            className="text-[#204f5e] bg-[#36c6c2] 
+            className="text-[#fff] bg-[#36c6c2] 
              w-fit py-2 px-5 
              rounded-full text-base sm:text-lg 
              font-semibold shadow-sm 
@@ -75,7 +76,7 @@ function Index() {
           {/* Heading */}
           <h1
             className="tagline-text text-2xl sm:text-4xl lg:text-5xl font-bold 
-                     text-[#204f53] leading-tight tracking-wide 
+                     text-[#36c6c2] leading-tight tracking-wide 
                      font-[var(--Oswald-font)] text-shadow-white"
           >
             Experience Light Live Tranquility
@@ -493,7 +494,7 @@ function Index() {
                   <h3 className="text-2xl font-semibold text-[var(--primary-color)] mb-2 tracking-wide transition-colors duration-300 hover:text-[var(--text-light)]">
                     {rooms.title}
                   </h3>
-                  <p className="text-md text-[var(--text-light)] max-w-[80%] mx-auto leading-relaxed mb-6">
+                  <p className="text-md text-[#204f5e] max-w-[80%] mx-auto leading-relaxed mb-6">
                     {rooms.description}
                   </p>
 
@@ -522,84 +523,80 @@ function Index() {
             About Oceanis
           </span>
           <h1
-            className="mt-6 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
+            className="mt-6 text-6xl font-oswald font-semibold text-[var(--primary-color)] 
                    drop-shadow-[0_2px_6px_var(--prim-light)] 
                    [text-shadow:1px_1px_0_var(--text-color)]"
           >
             “Where Grandeur Meets the Ocean”
           </h1>
           <ul className="flex flex-col gap-10">
-            <li className="flex flex-col sm:flex-row align-items-start gap-5">
-              <span className="text-2xl font-bold text-[#bea15d]">01.</span>
-              <div>
-                <h4 className="md:text-2xl text-xl font-semibold mb-2">
-                  Majestic Architecture & Design
-                </h4>
-                <p className="text-base md:text-lg">
-                  Oceanis Grand Palace is inspired by timeless royal
-                  architecture, seamlessly blended with modern elegance. Every
-                  arch, pillar, and interior detail reflects grandeur, creating
-                  the atmosphere of a palace by the ocean.
-                </p>
-              </div>
-            </li>
-            <li className="flex flex-col sm:flex-row align-items-start gap-5">
-              <span className="text-2xl font-bold text-[#bea15d]">02.</span>
-              <div>
-                <h4 className="md:text-2xl text-xl font-semibold mb-2">
-                  Grandeur Suites & Exclusive Spaces
-                </h4>
-                <p className="text-base md:text-lg">
-                  From exclusive suites to magnificent ballrooms, each space is
-                  designed to deliver unparalleled luxury. Premium materials,
-                  dramatic lighting, and refined layouts emphasize both comfort
-                  and sophistication.
-                </p>
-              </div>
-            </li>
-            <li className="flex flex-col sm:flex-row align-items-start gap-5">
-              <span className="text-2xl font-bold text-[#bea15d]">03.</span>
-              <div>
-                <h4 className="md:text-2xl text-xl font-semibold mb-2">
-                  Ocean Serenity & Scenic Harmony
-                </h4>
-                <p className="text-base md:text-lg">
-                  Positioned by the sea, the Grand Palace offers breathtaking
-                  views and calming ocean sounds. The harmony of waves, sea
-                  breeze, and majestic palace ambiance creates a unique
-                  sanctuary for the soul.
-                </p>
-              </div>
-            </li>
-            <li className="flex flex-col sm:flex-row align-items-start gap-5">
-              <span className="text-2xl font-bold text-[#bea15d]">04.</span>
-              <div>
-                <h4 className="md:text-2xl text-xl font-semibold mb-2">
-                  Royal Hospitality & Personalized Service
-                </h4>
-                <p className="text-base md:text-lg">
-                  Guests are welcomed with the warmth and refinement of royal
-                  service. Every detail is personalized, ensuring that each stay
-                  feels extraordinary, with hospitality that makes every guest
-                  feel like nobility.
-                </p>
-              </div>
-            </li>
-            <li className="flex flex-col sm:flex-row align-items-start gap-5">
-              <span className="text-2xl font-bold text-[#bea15d]">05.</span>
-              <div>
-                <h4 className="md:text-2xl text-xl font-semibold mb-2">
-                  Unforgettable Experiences & Timeless Memories
-                </h4>
-                <p className="text-base md:text-lg">
-                  Oceanis Grand Palace is more than a destination it is a
-                  masterpiece of architecture and hospitality. Every moment,
-                  from grand banquets to serene private retreats, becomes part
-                  of a timeless memory of true luxury.
-                </p>
-              </div>
-            </li>
+            {[
+              {
+                num: "01.",
+                title: "Majestic Architecture & Design",
+                desc: "Oceanis Grand Palace is inspired by timeless royal architecture, seamlessly blended with modern elegance. Every arch, pillar, and interior detail reflects grandeur, creating the atmosphere of a palace by the ocean.",
+              },
+              {
+                num: "02.",
+                title: "Grandeur Suites & Exclusive Spaces",
+                desc: "From exclusive suites to magnificent ballrooms, each space is designed to deliver unparalleled luxury. Premium materials, dramatic lighting, and refined layouts emphasize both comfort and sophistication.",
+              },
+              {
+                num: "03.",
+                title: "Ocean Serenity & Scenic Harmony",
+                desc: "Positioned by the sea, the Grand Palace offers breathtaking views and calming ocean sounds. The harmony of waves, sea breeze, and majestic palace ambiance creates a unique sanctuary for the soul.",
+              },
+              {
+                num: "04",
+                title: "Culinary Excellence & Royal Flavors",
+                desc: "Oceanis Grand Palace offers a curated dining experience where world-class chefs blend international cuisine with local delicacies. Each dish is crafted with artistry, premium ingredients, and refined presentation transforming every meal into a royal feast by the ocean."
+              }
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="flex flex-col sm:flex-row gap-1 items-start group"
+              >
+                {/* Nomor urut */}
+                <span className="text-xl font-bold text-[var(--primary-color)] bg-[rgba(255,255,255,0.08)] px-4 py-2 rounded-lg shadow-sm group-hover:shadow-[0_0_15px_var(--primary-color)] transition-all duration-300">
+                  {item.num}
+                </span>
+
+                {/* Konten */}
+                <div>
+                  <h4 className="text-xl md:text-xl font-semibold mb-2 text-[var(--primary-color)] tracking-wide transition-colors duration-300 group-hover:text-[var(--text-light)] [text-shadow:1px_1px_3px_rgba(0,0,0,0.4)]">
+                    {item.title}
+                  </h4>
+                  <p className="text-base md:text-sm text-[#fff] leading-relaxed max-w-[95%] [text-shadow:1px_1px_4px_rgba(0,0,0,0.6)]">
+                    {item.desc}
+                  </p>
+                </div>
+              </li>
+            ))}
           </ul>
+        </div>
+        <div className="lg:w-1/4 w-full">
+          <div className="about-images w-full h-full relative z-[9]">
+            <img
+              src={about1}
+              alt="about-image1"
+              className="about-image about-image1"
+            />
+            <img
+              src={about2}
+              alt="about-image2"
+              className="about-image about-image2"
+            />
+            <img
+              src={about3}
+              alt="about-image3"
+              className="about-image about-image3"
+            />
+            <img
+              src={about4}
+              alt="about-image4"
+              className="about-image about-image4"
+            />
+          </div>
         </div>
       </div>
     </>

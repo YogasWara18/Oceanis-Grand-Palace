@@ -210,3 +210,150 @@ html {
   }
 }
 
+/* About Section */
+.about {
+  position: relative;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+
+.about::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: url("./assets/About-Image.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.about-image1 {
+  position: absolute;
+  top: -310px;
+  left: 140px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  object-fit: cover;
+  transition: all 0.3s ease; 
+}
+
+.about-image1:hover {
+  transform: scale(1.1); 
+  border: 2px solid transparent; 
+  box-shadow: 0 0 12px var(--primary-color); 
+}
+
+
+.about-image2 {
+  position: absolute;
+  top: -200px;
+  right: 10px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.about-image2:hover {
+  transform: scale(1.1); 
+  border: 2px solid transparent; 
+  box-shadow: 0 0 12px var(--primary-color); 
+}
+
+.about-image3 {
+  position: absolute;
+  top: 40px;
+  right: 200px;
+  width: 200px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.about-image3:hover {
+  transform: scale(1.1); 
+  border: 2px solid transparent; 
+  box-shadow: 0 0 12px var(--primary-color); 
+}
+
+.about-image4 {
+  position: absolute;
+  top: 40px;
+  right: -90px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.about-image4:hover {
+  transform: scale(1.1); 
+  border: 2px solid transparent; 
+  box-shadow: 0 0 12px var(--primary-color); 
+}
+
+/* Default untuk desktop (sudah ada) */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about-image1,
+  .about-image2,
+  .about-image3,
+  .about-image4 {
+    position: static; /* hilangkan absolute */
+    margin: 20px auto; /* center */
+    display: block;
+  }
+
+  .about-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .about-text {
+    position: static; /* biar ikut flow */
+    transform: none;
+    margin-top: 8px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .about-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image1,
+  .about-image2,
+  .about-image3,
+  .about-image4 {
+    width: 80%; /* lebih kecil agar tidak bertabrakan */
+    height: auto;
+  }
+
+  .about-text {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+
+
+
+
+
