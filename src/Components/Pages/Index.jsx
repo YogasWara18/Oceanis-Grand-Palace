@@ -26,7 +26,6 @@ import RoomsData from "../../Rooms.json";
 import aboutImg from "../../assets/About-Image.png";
 import aboutImg2 from "../../assets/About-Image2.png";
 
-
 import avatar1 from "../../assets/Review1.png";
 import avatar2 from "../../assets/Review2.png";
 import avatar3 from "../../assets/Review3.png";
@@ -551,8 +550,8 @@ function Index() {
               {
                 num: "04",
                 title: "Culinary Excellence & Royal Flavors",
-                desc: "Oceanis Grand Palace offers a curated dining experience where world-class chefs blend international cuisine with local delicacies. Each dish is crafted with artistry, premium ingredients, and refined presentation transforming every meal into a royal feast by the ocean."
-              }
+                desc: "Oceanis Grand Palace offers a curated dining experience where world-class chefs blend international cuisine with local delicacies. Each dish is crafted with artistry, premium ingredients, and refined presentation transforming every meal into a royal feast by the ocean.",
+              },
             ].map((item, i) => (
               <li
                 key={i}
@@ -602,13 +601,75 @@ function Index() {
         </div>
       </div>
 
-      <div className="about-2 bg-[#f9f9f9] lg:px-[12%] px-[8%] py-[150px] relative overflow-hidden pb-0">
-            <div className="about flex flex-col lg:flex-row items-center justify-between gap-20 ralative z-[10]">
-              {/* Right Hero Image */}
-              <div className="w-full lg-w-1/2 relative z-[9]">
-              <img src={aboutImg2} alt="About image" className="w-full h-full " /></div>
+      <div className="about-2 bg-[var(--prim-light)] lg:px-[12%] px-[8%] py-[150px] relative overflow-hidden pb-0">
+        <div className="about flex flex-col lg:flex-row items-center justify-between gap-20 relative z-[10]">
+          {/* Right Hero Image */}
+          <div className="w-full lg:w-1/2 relative z-[9]">
+            <img
+              src={aboutImg2}
+              alt="About image"
+              className="w-full h-full object-contain relative z-10 drop-shadow-xl"
+            />
+          </div>
+
+          {/* Text Section */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
+            <div className="inline-block bg-[var(--prim-light)] text-xs font-medium text-[var(--text-light)] px-4 py-1 rounded-full mb-2 tracking-wide shadow-sm">
+           ABOUT US
             </div>
-      
+            <h2
+              className="mt-2 mb-3 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
+                   drop-shadow-[0_2px_6px_var(--prim-light)] 
+                   [text-shadow:1px_1px_0_var(--text-color)]"
+            >
+              Oceanis Grand Palace
+            </h2>
+            <p className="text-[var(--text-light)] mb-4 leading-relaxed">
+              Oceanis Grand Palace stands as a symbol of luxury and harmony.
+              Every detail is designed to deliver an experience that goes beyond
+              design a journey into comfort, elegance, and unforgettable
+              memories. Here, art blends with technology, creating a cinematic
+              and meaningful atmosphere.
+            </p>
+            <p className="text-[var(--text-light)] mb-8 leading-relaxed">
+              More than just a space, Oceanis Grand Palace is a destination. We
+              celebrate the blend of tradition and innovation, presenting a
+              modern feel that remains rooted in the values of classic elegance.
+              Every interaction, every angle, and every moment is designed to
+              leave a lasting impression.
+            </p>
+
+            {/* Contact Button */}
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <button
+                className="relative px-8 py-3 rounded-full font-medium flex items-center gap-3 bg-[var(--text-light)] text-[var(--white-color)] transition duration-500 overflow-hidden group"
+              >
+                {/* Icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 relative z-10"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M21 10c0 6-9 11-9 11s-9-5-9-11a9 9 0 1118 0z" />
+                </svg>
+
+                {/* Text */}
+                <span className="relative z-10">Get In Touch</span>
+
+                {/* Shimmer Effect */}
+                <span
+                  className="absolute inset-0 bg-gradient-to-r from-[var(--secondary-color)] via-[var(--text-color)] to-[var(--secondary-color)] opacity-0 group-hover:opacity-20 transition duration-500"
+                ></span>
+
+                {/* Glow Border */}
+                <span className="absolute inset-0 rounded-full border border-[var(--white-color)] opacity-20 group-hover:opacity-40"></span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
