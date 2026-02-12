@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import DatePicker from "react-datepicker";
@@ -41,7 +41,7 @@ import blog4 from "../../assets/Blog4.png";
 import { div } from "framer-motion/client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -58,6 +58,63 @@ function Index() {
     activeTab === "All"
       ? RoomsData
       : RoomsData.filter((room) => room.type === activeTab);
+
+  const swiperRef = useRef(null);
+
+  const avatars = [
+    avatar1,
+    avatar2,
+    avatar3,
+    avatar4,
+    avatar5,
+    avatar6,
+    avatar7,
+  ];
+
+  const testimonials = [
+    {
+      name: "Sophia Williams",
+      title: "Event Organizer",
+      message:
+        "”Hosting events here is extraordinary. The ambience, décor, and lighting elevate every occasion into something truly special”",
+    },
+    {
+      name: "Daniel Thompson",
+      title: "Business Strategist",
+      message:
+        "”Oceanis Grand Palace is more than a hotel; it is a destination that creates unforgettable memories with every stay”",
+    },
+    {
+      name: "Olivia Brown",
+      title: "Art Curator",
+      message:
+        "”Oceanis Grand Palace is where art and technology converge. Walking through its spaces feels like entering a living gallery”",
+    },
+    {
+      name: "Christopher Evans",
+      title: "Hospitality Director",
+      message:
+        "”The service is beyond exceptional. Guests are not just welcomed they are embraced with warmth and luxury”",
+    },
+    {
+      name: "William Carter",
+      title: "Architect & Design Consultant",
+      message:
+        "”The harmony between tradition and modern innovation here is remarkable. Oceanis Grand Palace sets a new benchmark in design”",
+    },
+    {
+      name: "Emily Johnson",
+      title: "Travel Blogger & Influencer",
+      message:
+        "”Every corner of Oceanis Grand Palace feels cinematic. It’s a place where beauty and comfort coexist perfectly”",
+    },
+    {
+      name: "James Anderson",
+      title: "CEO, Global Luxury Travel Group",
+      message:
+        "”Oceanis Grand Palace is a masterpiece of hospitality. Every detail reflects sophistication and timeless elegance”",
+    },
+  ];
 
   return (
     <>
@@ -175,7 +232,7 @@ function Index() {
         <div className="section-title text-center w-full space-y-6">
           <span
             className="rounded-full px-6 py-2 font-bricolage tracking-wider text-sm uppercase 
-                 bg-[var(--prim-light)] text-[var(--text-color)] shadow-md"
+                 bg-[var(--prim-light)] text-[var(--text-color)] border border-[var(--text-light)] shadow-md"
           >
             Services at Oceanis Grand Palace
           </span>
@@ -289,7 +346,7 @@ function Index() {
         <div className="section-title text-center mb-20">
           <span
             className="rounded-full px-6 py-2 font-bricolage tracking-wider text-sm uppercase 
-                     bg-[var(--prim-light)] text-[var(--text-color)] shadow-md"
+                     bg-[var(--prim-light)] text-[var(--text-color)] border border-[var(--text-light)] shadow-md"
           >
             Oceanis Highlights
           </span>
@@ -425,7 +482,7 @@ function Index() {
         <div className="section-title text-center mb-20">
           <span
             className="rounded-full px-6 py-2 font-bricolage tracking-wider text-sm uppercase 
-                     bg-[var(--prim-light)] text-[var(--text-color)] shadow-md"
+                     bg-[var(--prim-light)] text-[var(--text-color)] border border-[var(--text-light)] shadow-md"
           >
             Oceanis Rooms
           </span>
@@ -519,7 +576,7 @@ function Index() {
         <div className="section-title text-start space-y-4 relative z-[9] lg:w-1/2 w-full">
           <span
             className="rounded-full px-6 py-2 font-bricolage tracking-wider text-sm uppercase 
-                     bg-[var(--prim-light)] text-[var(--text-color)] shadow-md"
+                     bg-[var(--prim-light)] text-[var(--text-color)] border border-[var(--text-light)] shadow-md"
           >
             About Oceanis
           </span>
@@ -601,50 +658,48 @@ function Index() {
         </div>
       </div>
 
-      <div className="about-2 bg-[var(--prim-light)] lg:px-[12%] px-[8%] py-[150px] relative overflow-hidden pb-0">
-        <div className="about flex flex-col lg:flex-row items-center justify-between gap-20 relative z-[10]">
+      <div className="about-2 bg-[var(--prim-light)] px-[6%] md:px-[8%] lg:px-[12%] py-[80px] md:py-[120px] lg:py-[150px] relative overflow-hidden pb-0">
+        <div className="about flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-14 lg:gap-20 relative z-[10]">
           {/* Right Hero Image */}
           <div className="w-full lg:w-1/2 relative z-[9]">
             <img
               src={aboutImg2}
               alt="About image"
-              className="w-full h-full object-contain relative z-10 drop-shadow-xl"
+              className="w-full h-auto max-w-[320px] md:max-w-[480px] lg:max-w-full object-contain relative z-10 drop-shadow-xl mx-auto"
             />
           </div>
 
           {/* Text Section */}
           <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <div className="inline-block bg-[var(--prim-light)] text-xs font-medium text-[var(--text-light)] px-4 py-1 rounded-full mb-2 tracking-wide shadow-sm">
-           ABOUT US
+            <div className="inline-block bg-[var(--prim-light)] text-[10px] md:text-xs font-medium text-[var(--text-light)] border border-[var(--text-light)] px-3 md:px-4 py-1 rounded-full mb-2 tracking-wide shadow-sm">
+              ABOUT US
             </div>
-            <h2
-              className="mt-2 mb-3 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
-                   drop-shadow-[0_2px_6px_var(--prim-light)] 
-                   [text-shadow:1px_1px_0_var(--text-color)]"
-            >
+
+            <h2 className="mt-2 mb-3 text-3xl md:text-4xl lg:text-5xl font-oswald font-semibold text-[var(--primary-color)] drop-shadow-[0_2px_6px_var(--prim-light)] [text-shadow:1px_1px_0_var(--text-color)]">
               Oceanis Grand Palace
             </h2>
-            <p className="text-[var(--text-light)] mb-4 leading-relaxed">
-              Oceanis Grand Palace stands as a symbol of luxury and harmony.
-              Every detail is designed to deliver an experience that goes beyond
-              design a journey into comfort, elegance, and unforgettable
-              memories. Here, art blends with technology, creating a cinematic
-              and meaningful atmosphere.
+
+            <p className="text-[#204f5e] mb-4 leading-relaxed text-sm md:text-base lg:text-lg">
+              Oceanis Grand Palace stands as a timeless symbol of luxury and
+              harmony. Every detail is carefully curated to deliver more than
+              just design it is a journey into comfort, elegance, and
+              unforgettable memories. Here, art blends seamlessly with
+              technology, creating an atmosphere that feels cinematic,
+              immersive, and deeply meaningful.
             </p>
-            <p className="text-[var(--text-light)] mb-8 leading-relaxed">
-              More than just a space, Oceanis Grand Palace is a destination. We
-              celebrate the blend of tradition and innovation, presenting a
-              modern feel that remains rooted in the values of classic elegance.
-              Every interaction, every angle, and every moment is designed to
-              leave a lasting impression.
+            <p className="text-[#204f5e] mb-8 leading-relaxed text-sm md:text-base lg:text-lg">
+              More than just a space, Oceanis Grand Palace is a destination
+              where tradition meets innovation. We celebrate the essence of
+              classic elegance while embracing modern sophistication, presenting
+              a refined experience that remains rooted in authenticity. Every
+              interaction, every angle, and every moment is designed to leave a
+              lasting impression, inviting guests to discover a world where
+              beauty, comfort, and prestige coexist in perfect balance.
             </p>
 
-            {/* Contact Button */}
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <button
-                className="relative px-8 py-3 rounded-full font-medium flex items-center gap-3 bg-[var(--text-light)] text-[var(--white-color)] transition duration-500 overflow-hidden group"
-              >
-                {/* Icon */}
+            {/* Contact Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+              <button className="px-6 py-2 sm:px-8 sm:py-3 rounded-full font-medium flex items-center gap-2 sm:gap-3 bg-[var(--text-light)] text-[var(--white-color)] transition duration-500 overflow-hidden group transform hover:scale-105 hover:shadow-lg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 relative z-10"
@@ -655,19 +710,102 @@ function Index() {
                 >
                   <path d="M21 10c0 6-9 11-9 11s-9-5-9-11a9 9 0 1118 0z" />
                 </svg>
-
-                {/* Text */}
-                <span className="relative z-10">Get In Touch</span>
-
-                {/* Shimmer Effect */}
-                <span
-                  className="absolute inset-0 bg-gradient-to-r from-[var(--secondary-color)] via-[var(--text-color)] to-[var(--secondary-color)] opacity-0 group-hover:opacity-20 transition duration-500"
-                ></span>
-
-                {/* Glow Border */}
-                <span className="absolute inset-0 rounded-full border border-[var(--white-color)] opacity-20 group-hover:opacity-40"></span>
+                <span>Get In Touch</span>
+              </button>
+              <button className="px-6 py-2 sm:px-8 sm:py-3 rounded-full font-medium flex items-center gap-2 sm:gap-3 bg-[var(--text-light)] text-[var(--white-color)] transition duration-500 overflow-hidden group transform hover:scale-105 hover:shadow-lg">
+                Book Now <i className="fa-solid fa-arrow-right"></i>
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[var(--prim-light)] w-full">
+        <div
+          className="w-full lg:w-[95%] mx-auto py-16 rounded-[30px] 
+                  bg-[var(--white-color)] shadow-[0_8px_30px_rgba(0,0,0,0.12)] 
+                  relative z-[10] backdrop-blur-xl border border-[var(--prim-light)]"
+        >
+          <div className="text-center mb-12">
+            <span
+              className="rounded-full px-8 py-3 font-bricolage tracking-wider text-sm uppercase 
+                   bg-[var(--prim-light)] text-[var(--text-color)] shadow-md 
+                   border border-[var(--text-light)]"
+            >
+              Reviews Oceanis
+            </span>
+            <h1
+              className="mt-6 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
+                   drop-shadow-[0_3px_8px_var(--prim-light)] 
+                   [text-shadow:2px_2px_0_var(--text-color)]"
+            >
+              “Stories of unforgettable journeys”
+            </h1>
+
+            {/* Avatar Navigation */}
+            <div className="flex items-center justify-center space-x-6 mb-8 mt-8">
+              {avatars.map((avatar, index) => (
+                <img
+                  key={index}
+                  src={avatar}
+                  alt={`avatar${index}`}
+                  className={`cursor-pointer rounded-full object-cover border-2 
+                        border-[var(--primary-color)] shadow-lg 
+                        transition-all duration-500 ease-in-out 
+                        ${activeIndex === index ? "w-20 h-20 scale-110" : "w-14 h-14 opacity-70"}`}
+                  onClick={() => {
+                    setActiveIndex(index);
+                    swiperRef.current?.slideToLoop(index);
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Swiper Section */}
+          <div className="max-w-4xl mx-auto relative">
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+              }}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+              navigation={{
+                nextEl: ".costum-next",
+                prevEl: ".costum-prev",
+              }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex flex-col items-center text-center px-8">
+                    <div className="text-[var(--text-color)] text-5xl mb-6 animate-pulse">
+                      ”
+                    </div>
+                    <p
+                      className="text-gray-700 text-lg italic max-w-2xl leading-relaxed 
+                           bg-[var(--prim-light)] px-6 py-4 rounded-2xl shadow-inner"
+                    >
+                      {testimonial.message}
+                    </p>
+                    <div className="mt-6">
+                      <h4
+                        className="font-bold text-xl text-[var(--black-color)] 
+                               [text-shadow:1px_1px_0_var(--text-light)]"
+                      >
+                        {testimonial.name}
+                      </h4>
+                      <span className="text-sm uppercase tracking-wider text-gray-500">
+                        {testimonial.title}
+                      </span>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
