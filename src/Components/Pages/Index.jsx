@@ -675,10 +675,12 @@ function Index() {
               ABOUT US
             </div>
 
-            <h2 className="mt-2 mb-2 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
+            <h2
+              className="mt-2 mb-2 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
                    drop-shadow-[0_3px_8px_var(--prim-light)] 
-                   [text-shadow:2px_2px_0_var(--text-color)]">
-               “Oceanis Grand Palace”
+                   [text-shadow:2px_2px_0_var(--text-color)]"
+            >
+              “Oceanis Grand Palace”
             </h2>
 
             <p className="text-[#204f5e] mb-4 leading-relaxed text-sm md:text-base lg:text-lg">
@@ -789,7 +791,9 @@ function Index() {
                     </div>
                     <p
                       className="text-gray-700 text-lg italic max-w-2xl leading-relaxed 
-                           bg-[var(--prim-light)] px-6 py-4 rounded-2xl shadow-inner"
+             bg-[var(--prim-light)] px-6 py-4 rounded-2xl 
+             shadow-[0_0_15px_var(--primary-color)] 
+             border border-[var(--prim-light)] backdrop-blur-sm"
                     >
                       {testimonial.message}
                     </p>
@@ -808,6 +812,88 @@ function Index() {
                 </SwiperSlide>
               ))}
             </Swiper>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#eafbfb] lg:px-[12%] px-[8%] py-[150px] flex flex-col items-center justify-center gap-10 z-[9] relative overflow-hidden pt-[20px]">
+        <span
+          className="rounded-full mt-6 px-8 py-3 font-bricolage tracking-wider text-sm uppercase 
+                   bg-[var(--prim-light)] text-[var(--text-color)] shadow-md 
+                   border border-[var(--text-light)]"
+        >
+          Oceanis Chronicles
+        </span>
+        <h1
+          className="mt-2 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
+                   drop-shadow-[0_3px_8px_var(--prim-light)] 
+                   [text-shadow:2px_2px_0_var(--text-color)]"
+        >
+          “Stories crafted in elegance and prestige””
+        </h1>
+
+        {/* Blogs */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full text-left">
+          <div
+            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
+                  shadow-[0_6px_25px_var(--primary-color)] 
+                  hover:shadow-[0_10px_35px_var(--primary-color)] 
+                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+          >
+            {/* Image */}
+            <div className="overflow-hidden rounded-t-[20px]">
+              <img
+                src={blog1}
+                alt="Oceanis blog image"
+                className="w-full h-60 object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-6 bg-transparent rounded-b-[20px]">
+              {/* Author & Date */}
+              <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
+                <img
+                  src={blog1}
+                  alt="author avatar"
+                  className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
+                />
+                <span className="font-semibold text-[var(--text-color)]">
+                  Paul T.
+                </span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span className="italic text-gray-400">24.09.2025</span>
+              </div>
+
+              {/* Title */}
+              <h3
+                className="font-oswald font-semibold text-xl text-[var(--black-color)] mb-3 leading-snug 
+                     [text-shadow:1px_1px_0_var(--text-light)]"
+              >
+                Embrace the Ocean Breeze: Your Next Luxury Escape
+              </h3>
+
+              {/* Description */}
+              <p
+                className="text-gray-700 text-sm mb-5 leading-relaxed 
+                   bg-transparent px-4 py-3 rounded-xl 
+                   shadow-[0_0_15px_var(--primary-color)]"
+              >
+                Discover why the serene beauty of the beach is the perfect
+                setting for your next unforgettable journey. From golden sunsets
+                to tranquil waves, Oceanis Grand Palace invites you to
+                experience luxury beyond imagination.
+              </p>
+
+              {/* Read More */}
+              <a
+                href="#"
+                className="text-sm font-semibold text-[var(--primary-color)] inline-flex items-center group"
+              >
+                Read More
+                <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
