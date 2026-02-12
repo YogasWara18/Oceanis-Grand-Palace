@@ -239,8 +239,8 @@ function Index() {
           <h1
             className="text-5xl font-oswald font-semibold 
                  text-[var(--primary-color)] 
-                 drop-shadow-[0_2px_6px_var(--prim-light)] 
-                 [text-shadow:1px_1px_0_var(--text-color)]"
+                 drop-shadow-[0_3px_8px_var(--prim-light)] 
+                   [text-shadow:2px_2px_0_var(--text-color)]"
           >
             “Crafting Moments of Timeless Elegance”
           </h1>
@@ -352,8 +352,8 @@ function Index() {
           </span>
           <h1
             className="mt-6 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
-                   drop-shadow-[0_2px_6px_var(--prim-light)] 
-                   [text-shadow:1px_1px_0_var(--text-color)]"
+                    drop-shadow-[0_3px_8px_var(--prim-light)] 
+                   [text-shadow:2px_2px_0_var(--text-color)]"
           >
             ”Unveiling Excellence in Every Detail”
           </h1>
@@ -488,8 +488,8 @@ function Index() {
           </span>
           <h1
             className="mt-6 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
-                   drop-shadow-[0_2px_6px_var(--prim-light)] 
-                   [text-shadow:1px_1px_0_var(--text-color)]"
+                   drop-shadow-[0_3px_8px_var(--prim-light)] 
+                   [text-shadow:2px_2px_0_var(--text-color)]"
           >
             ”Elegance and serenity in every room”
           </h1>
@@ -675,8 +675,10 @@ function Index() {
               ABOUT US
             </div>
 
-            <h2 className="mt-2 mb-3 text-3xl md:text-4xl lg:text-5xl font-oswald font-semibold text-[var(--primary-color)] drop-shadow-[0_2px_6px_var(--prim-light)] [text-shadow:1px_1px_0_var(--text-color)]">
-              Oceanis Grand Palace
+            <h2 className="mt-2 mb-2 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
+                   drop-shadow-[0_3px_8px_var(--prim-light)] 
+                   [text-shadow:2px_2px_0_var(--text-color)]">
+               “Oceanis Grand Palace”
             </h2>
 
             <p className="text-[#204f5e] mb-4 leading-relaxed text-sm md:text-base lg:text-lg">
