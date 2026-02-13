@@ -48,13 +48,9 @@ function About() {
                 About Us
               </span>
               <h2
-                className="text-3xl sm:text-4xl font-semibold mt-4 font-oswald font-semibold
-    text-transparent bg-clip-text
-    bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)]
-    drop-shadow-[0_3px_8px_var(--primary-color)]"
-                style={{
-                  textShadow: `2px 2px 0 var(--text-color), 4px 4px 0 rgba(0,0,0,0.25), 6px 6px 8px var(--primary-color)`,
-                }}
+                className="mt-6 -mb-5 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
+                    drop-shadow-[0_3px_8px_var(--prim-light)] 
+                   [text-shadow:2px_2px_0_var(--text-color)]"
               >
                 Story About Us
               </h2>
@@ -63,11 +59,43 @@ function About() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-[#204f5e] leading-relaxed text-[15px]">
               <div>
                 <p className="mb-5 text-[var(--color-text)]">
-                  Oceanis Grand Palace stands as a symbol of timeless luxury in
-                  the heart of Medan, blending modern sophistication with the
-                  warmth of Indonesian heritage. More than a hotel, we are the
-                  centerpiece of premium hospitality, redefining the true
-                  meaning of comfort and grandeur
+                  Oceanis Grand Palace rises proudly in the heart of Medan as a
+                  symbol of timeless luxury and refined hospitality. Its grand
+                  architecture harmonizes modern sophistication with the warmth
+                  of Indonesian heritage, creating a sanctuary where every
+                  detail reflects elegance and excellence.
+                </p>
+                <p className="mb-5 text-[var(--color-text)]">
+                  From the moment you step into the majestic lobby, Oceanis
+                  Grand Palace reveals its cinematic design and curated
+                  interiors. Each space is crafted to evoke harmony and comfort,
+                  offering a seamless blend of grandeur and intimacy for both
+                  leisure and business.
+                </p>
+                <p className="mb-5 text-[var(--color-text)]">
+                  Beyond being a destination, Oceanis Grand Palace serves as the
+                  centerpiece of Medan’s hospitality scene. It is a place where
+                  international conferences, family celebrations, and romantic
+                  escapes find their perfect stage, supported by impeccable
+                  service and heartfelt dedication.
+                </p>
+              </div>
+
+              <div>
+                <p className="mb-5 text-[var(--color-text)]">
+                  Standing proudly as an icon of the city, Oceanis Grand Palace
+                  connects Medan to the world with elegance and prestige. Its
+                  presence is not only architectural but cultural, symbolizing
+                  the city’s growth and global aspirations. Here, luxury is not
+                  simply offered it is lived, creating stories that guests carry
+                  long after their stay.
+                </p>
+                <p className="mb-5 text-[var(--color-text)]">
+                  Oceanis Grand Palace is more than a hotel it is a living
+                  testament to refinement, harmony, and unforgettable
+                  experiences. Each visit becomes part of a larger narrative one
+                  of grandeur, comfort, and prestige making Oceanis the ultimate
+                  symbol of premium living in Sumatera Utara.
                 </p>
               </div>
             </div>
