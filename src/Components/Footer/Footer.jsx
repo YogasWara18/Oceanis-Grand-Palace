@@ -23,9 +23,9 @@ function Footer() {
           <p className="mt-4 text-sm text-[var(--text-light)] font-[var(--Arimo-font)]">
             Experience luxury redefined by the Oceanis Grand Palace.
           </p>
+
           {/* Social Media */}
           <div className="mt-2">
-            {/* Container untuk ikon */}
             <div className="flex justify-center lg:justify-start gap-8">
               {[
                 { icon: socialIcon1, label: "YouTube" },
@@ -45,36 +45,23 @@ function Footer() {
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div>
-          <p className="text-sm text-[var(--text-light)] mb-4">
-            Subscribe to our luxury newsletter
-          </p>
-          <div className="flex items-center bg-[var(--white-color)] px-4 py-2 rounded-full shadow-inner">
-            <input
-              type="text"
-              placeholder="Enter Your Email"
-              className="flex-1 bg-transparent outline-none text-sm font-[var(--Arimo-font)]"
-            />
-            <i className="ri-arrow-right-line text-lg bg-[var(--text-color)] text-white w-[38px] h-[38px] flex items-center justify-center rounded-full cursor-pointer hover:bg-[var(--secondary-color)] transition"></i>
-          </div>
-        </div>
-
         {/* Navigation */}
         <div>
           <h3 className="text-lg font-[var(--Oswald-font)] text-[var(--text-color)] mb-4">
             Explore
           </h3>
           <div className="flex flex-col gap-2">
-            {["Home", "About", "Rooms", "Blogs", "Contact"].map((label, idx) => (
-              <Link
-                key={idx}
-                to="/"
-                className="text-sm font-[var(--Oswald-font)] text-[var(--text-light)] hover:text-[var(--secondary-color)] transition"
-              >
-                {label}
-              </Link>
-            ))}
+            {["Home", "About", "Rooms", "Blogs", "Contact"].map(
+              (label, idx) => (
+                <Link
+                  key={idx}
+                  to="/"
+                  className="text-sm font-[var(--Oswald-font)] text-[var(--text-light)] hover:text-[var(--secondary-color)] transition"
+                >
+                  {label}
+                </Link>
+              ),
+            )}
           </div>
         </div>
 
@@ -95,6 +82,28 @@ function Footer() {
                 </Link>
               ),
             )}
+          </div>
+        </div>
+
+        {/* Newsletter */}
+        <div>
+          <p className="text-sm text-[var(--text-light)] mb-4">
+            Subscribe to our luxury newsletter
+          </p>
+          <div className="flex items-center bg-[var(--white-color)] px-4 py-2 rounded-full shadow-inner">
+            <input
+              type="text"
+              placeholder="Enter Your Email"
+              className="flex-1 bg-transparent outline-none text-sm font-[var(--Arimo-font)]"
+            />
+            <i className="ri-arrow-right-line text-lg bg-[var(--text-color)] text-white w-[38px] h-[38px] flex items-center justify-center rounded-full cursor-pointer hover:bg-[var(--secondary-color)] transition"></i>
+          </div>
+          <div className="flex flex-col gap-2 text-sm font-[var(--Arimo-font)] text-[var(--text-light)]">
+            <p>Oceanis Grand Palace</p>
+            <p>Jl. Pantai Indah No. 88</p>
+            <p>Medan, Sumatera Utara, Indonesia</p>
+            <p>Phone: +62 812-3456-7890</p>
+            <p>Email: info@oceanisgrandpalace.com</p>
           </div>
         </div>
       </div>
