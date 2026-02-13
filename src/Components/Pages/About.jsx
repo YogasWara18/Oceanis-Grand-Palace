@@ -97,6 +97,21 @@ function About() {
                   of grandeur, comfort, and prestige making Oceanis the ultimate
                   symbol of premium living in Sumatera Utara.
                 </p>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-8">
+                    <div className="flex items-center gap-4">
+                        <img src={authorImg} alt="Emma Millar" 
+                        className="w-20 h-20 -mt-5 "
+                        />
+                        <div>
+                            <h4 className="font-semibold text-[var(--color-text)]">
+                                Priscillia Miller
+                            </h4>
+                            <span className="text-sm text-[var(--color-text)]">Hotel Administrator</span>
+                        </div>
+                    </div>
+
+                    <img src={signatureImg} alt="Signature" className="w-32 object-contain" />
+                </div>
               </div>
             </div>
           </div>
