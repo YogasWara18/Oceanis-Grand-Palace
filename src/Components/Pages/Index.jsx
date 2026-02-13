@@ -817,7 +817,7 @@ function Index() {
         </div>
       </div>
 
-      <div className="bg-[#eafbfb] lg:px-[12%] px-[8%] py-[150px] flex flex-col items-center justify-center gap-10 z-[9] relative overflow-hidden pt-[20px]">
+      <div className="blog blog-2 bg-[#eafbfb] lg:px-[12%] px-[8%] py-[150px] flex flex-col items-center justify-center gap-10 z-[9] relative overflow-hidden pt-[20px]">
         <span
           className="rounded-full mt-6 px-8 py-3 font-bricolage tracking-wider text-sm uppercase 
                    bg-[var(--prim-light)] text-[var(--text-color)] shadow-md 
