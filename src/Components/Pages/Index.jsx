@@ -23,7 +23,6 @@ import about4 from "../../assets/About4.png";
 
 import RoomsData from "../../Rooms.json";
 
-import aboutImg from "../../assets/About-Image.png";
 import aboutImg2 from "../../assets/About-Image2.png";
 
 import avatar1 from "../../assets/Review1.png";
@@ -38,6 +37,8 @@ import blog1 from "../../assets/Blog1.png";
 import blog2 from "../../assets/Blog2.png";
 import blog3 from "../../assets/Blog3.png";
 import blog4 from "../../assets/Blog4.png";
+import blog5 from "../../assets/Blog5.png";
+import blog6 from "../../assets/Blog6.png";
 import { div } from "framer-motion/client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -822,7 +823,7 @@ function Index() {
                    bg-[var(--prim-light)] text-[var(--text-color)] shadow-md 
                    border border-[var(--text-light)]"
         >
-          Oceanis Chronicles
+          Oceanis Blog
         </span>
         <h1
           className="mt-2 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
@@ -880,9 +881,302 @@ function Index() {
                    shadow-[0_0_15px_var(--primary-color)]"
               >
                 Discover why the serene beauty of the beach is the perfect
-                setting for your next unforgettable journey. From golden sunsets
-                to tranquil waves, Oceanis Grand Palace invites you to
-                experience luxury beyond imagination.
+                setting for your next unforgettable journey.
+              </p>
+
+              {/* Read More */}
+              <a
+                href="#"
+                className="text-sm font-semibold text-[var(--primary-color)] inline-flex items-center group"
+              >
+                Read More
+                <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
+                  shadow-[0_6px_25px_var(--primary-color)] 
+                  hover:shadow-[0_10px_35px_var(--primary-color)] 
+                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+          >
+            {/* Image */}
+            <div className="overflow-hidden rounded-t-[20px]">
+              <img
+                src={blog2}
+                alt="Oceanis blog image"
+                className="w-full h-60 object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-6 bg-transparent rounded-b-[20px]">
+              {/* Author & Date */}
+              <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
+                <img
+                  src={blog2}
+                  alt="author avatar"
+                  className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
+                />
+                <span className="font-semibold text-[var(--text-color)]">
+                  Shopia L.
+                </span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span className="italic text-gray-400">12.10.2025</span>
+              </div>
+
+              {/* Title */}
+              <h3
+                className="font-oswald font-semibold text-xl text-[var(--black-color)] mb-3 leading-snug 
+                     [text-shadow:1px_1px_0_var(--text-light)]"
+              >
+                Sunset Serenity: A Journey into Tranquility
+              </h3>
+
+              {/* Description */}
+              <p
+                className="text-gray-700 text-sm mb-5 leading-relaxed 
+                   bg-transparent px-4 py-3 rounded-xl 
+                   shadow-[0_0_15px_var(--primary-color)]"
+              >
+                Experience the calming embrace of Oceanis sunsets, where golden
+                skies meet gentle waves, creating timeless memories.
+              </p>
+
+              {/* Read More */}
+              <a
+                href="#"
+                className="text-sm font-semibold text-[var(--primary-color)] inline-flex items-center group"
+              >
+                Read More
+                <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
+                  shadow-[0_6px_25px_var(--primary-color)] 
+                  hover:shadow-[0_10px_35px_var(--primary-color)] 
+                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+          >
+            {/* Image */}
+            <div className="overflow-hidden rounded-t-[20px]">
+              <img
+                src={blog3}
+                alt="Oceanis blog image"
+                className="w-full h-60 object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-6 bg-transparent rounded-b-[20px]">
+              {/* Author & Date */}
+              <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
+                <img
+                  src={blog3}
+                  alt="author avatar"
+                  className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
+                />
+                <span className="font-semibold text-[var(--text-color)]">
+                  Daniel R.
+                </span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span className="italic text-gray-400">05.11.2025</span>
+              </div>
+
+              {/* Title */}
+              <h3
+                className="font-oswald font-semibold text-xl text-[var(--black-color)] mb-3 leading-snug 
+                     [text-shadow:1px_1px_0_var(--text-light)]"
+              >
+                Culinary Bliss: Tastes of the Ocean
+              </h3>
+
+              {/* Description */}
+              <p
+                className="text-gray-700 text-sm mb-5 leading-relaxed 
+                   bg-transparent px-4 py-3 rounded-xl 
+                   shadow-[0_0_15px_var(--primary-color)]"
+              >
+                Indulge in exquisite flavors inspired by the sea. Oceanis Grand
+                Palace offers a dining experience that awakens the senses.
+              </p>
+
+              {/* Read More */}
+              <a
+                href="#"
+                className="text-sm font-semibold text-[var(--primary-color)] inline-flex items-center group"
+              >
+                Read More
+                <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
+                  shadow-[0_6px_25px_var(--primary-color)] 
+                  hover:shadow-[0_10px_35px_var(--primary-color)] 
+                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+          >
+            {/* Image */}
+            <div className="overflow-hidden rounded-t-[20px]">
+              <img
+                src={blog4}
+                alt="Oceanis blog image"
+                className="w-full h-60 object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-6 bg-transparent rounded-b-[20px]">
+              {/* Author & Date */}
+              <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
+                <img
+                  src={blog4}
+                  alt="author avatar"
+                  className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
+                />
+                <span className="font-semibold text-[var(--text-color)]">
+                  Isabelle M.
+                </span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span className="italic text-gray-400">18.12.2025</span>
+              </div>
+
+              {/* Title */}
+              <h3
+                className="font-oswald font-semibold text-xl text-[var(--black-color)] mb-3 leading-snug 
+                     [text-shadow:1px_1px_0_var(--text-light)]"
+              >
+                Wellness Retreat: Rejuvenate by the Waves
+              </h3>
+
+              {/* Description */}
+              <p
+                className="text-gray-700 text-sm mb-5 leading-relaxed 
+                   bg-transparent px-4 py-3 rounded-xl 
+                   shadow-[0_0_15px_var(--primary-color)]"
+              >
+                Restore your mind and body with Oceanis spa rituals, blending
+                natural elements and luxurious comfort.
+              </p>
+
+              {/* Read More */}
+              <a
+                href="#"
+                className="text-sm font-semibold text-[var(--primary-color)] inline-flex items-center group"
+              >
+                Read More
+                <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
+                  shadow-[0_6px_25px_var(--primary-color)] 
+                  hover:shadow-[0_10px_35px_var(--primary-color)] 
+                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+          >
+            {/* Image */}
+            <div className="overflow-hidden rounded-t-[20px]">
+              <img
+                src={blog5}
+                alt="Oceanis blog image"
+                className="w-full h-60 object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-6 bg-transparent rounded-b-[20px]">
+              {/* Author & Date */}
+              <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
+                <img
+                  src={blog5}
+                  alt="author avatar"
+                  className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
+                />
+                <span className="font-semibold text-[var(--text-color)]">
+                  Marco V.
+                </span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span className="italic text-gray-400">02.01.2026</span>
+              </div>
+
+              {/* Title */}
+              <h3
+                className="font-oswald font-semibold text-xl text-[var(--black-color)] mb-3 leading-snug 
+                     [text-shadow:1px_1px_0_var(--text-light)]"
+              >
+                Adventure Awaits: Explore the Oceanis Coast
+              </h3>
+
+              {/* Description */}
+              <p
+                className="text-gray-700 text-sm mb-5 leading-relaxed 
+                   bg-transparent px-4 py-3 rounded-xl 
+                   shadow-[0_0_15px_var(--primary-color)]"
+              >
+                From hidden coves to vibrant marine life, Oceanis offers
+                adventures that spark curiosity and wonder.
+              </p>
+
+              {/* Read More */}
+              <a
+                href="#"
+                className="text-sm font-semibold text-[var(--primary-color)] inline-flex items-center group"
+              >
+                Read More
+                <span className="ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
+          </div>
+          <div
+            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
+                  shadow-[0_6px_25px_var(--primary-color)] 
+                  hover:shadow-[0_10px_35px_var(--primary-color)] 
+                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+          >
+            {/* Image */}
+            <div className="overflow-hidden rounded-t-[20px]">
+              <img
+                src={blog6}
+                alt="Oceanis blog image"
+                className="w-full h-60 object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-6 bg-transparent rounded-b-[20px]">
+              {/* Author & Date */}
+              <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
+                <img
+                  src={blog6}
+                  alt="author avatar"
+                  className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
+                />
+                <span className="font-semibold text-[var(--text-color)]">
+                  Lucas T..
+                </span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span className="italic text-gray-400">02.0.2026</span>
+              </div>
+
+              {/* Title */}
+              <h3
+                className="font-oswald font-semibold text-xl text-[var(--black-color)] mb-3 leading-snug 
+                     [text-shadow:1px_1px_0_var(--text-light)]"
+              >
+                Oceanis Wellness: Strength Meets Serenity
+              </h3>
+
+              {/* Description */}
+              <p
+                className="text-gray-700 text-sm mb-5 leading-relaxed 
+                   bg-transparent px-4 py-3 rounded-xl 
+                   shadow-[0_0_15px_var(--primary-color)]"
+              >
+                Discover a new dimension of fitness at Oceanis Coast. Train with
+                world-class equipment in a luxurious space.
               </p>
 
               {/* Read More */}
