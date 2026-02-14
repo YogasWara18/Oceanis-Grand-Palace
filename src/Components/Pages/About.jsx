@@ -133,6 +133,44 @@ function About() {
           </div>
         </div>
       </div>
+
+      <div className="bg-[var(--prim-light)] w-full px-[8%] lg:px-[12%] py-[100px] overflow-hidden pb-0">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="flex justify-center lg:justify-start relative">
+            <img
+              src={heroImg}
+              className="w-full max-w-md object-contain"
+              alt="Hero-about-image"
+            />
+          </div>
+          <div className="text-[var(--color-text)] -mt-30 text-center lg:text-left">
+            <span
+              className="rounded-full px-4 sm:px-6 py-2 font-bricolage tracking-wider text-xs sm:text-sm uppercase 
+                     bg-[var(--prim-light)] text-[var(--text-color)] border border-[var(--text-light)] shadow-md"
+            >
+              Nature Elegance Discovery.
+            </span>
+            <h2
+              className="mt-2 sm:-mb-5 text-3xl sm:text-4xl md:text-5xl font-oswald font-semibold 
+                     text-transparent bg-clip-text 
+                     bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
+                     drop-shadow-[0_3px_8px_var(--prim-light)] 
+                     [text-shadow:2px_2px_0_var(--text-color)]"
+            >
+              Oceanis Grand Palace <br />{" "}
+              <span className="text-[var(--color-text)]">
+                where stories begin.
+              </span>
+            </h2>
+            <p className="text-[var(--color-text)] text-[15px] mb-1 mt-7">
+              Oceanis Grand Palace is a place where journeys meet elegance. Inspired by the touch of nature, every detail is crafted to bring harmony, comfort, and timeless experiences. We believe that travel is more than movement it is a story that grows alongside the beauty of the world.
+            </p>
+             <p className="text-[var(--color-text)] text-[15px] mb-4">
+             With the spirit of discovery and a sense of refinement, Oceanis Grand Palace becomes a destination where every moment feels extraordinary. We celebrate the union of luxury and serenity, offering experiences that touch the heart and leave an everlasting impression.
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
