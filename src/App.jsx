@@ -4,6 +4,7 @@ import Index from '../src/Components/Pages/Index';
 import Footer from './Components/Footer/Footer';
 import Copyright from './Components/Footer/Copyright';
 import About from './Components/Pages/About';
+import Services from './Components/Pages/Services';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
       <Footer/>
       <Copyright/>

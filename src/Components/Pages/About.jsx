@@ -139,11 +139,17 @@ function About() {
           <div className="flex justify-center lg:justify-start relative">
             <img
               src={heroImg}
-              className="w-full max-w-md object-contain"
               alt="Hero-about-image"
+              className="
+      w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg
+      object-contain
+      -translate-y-6 sm:-translate-y-8 md:translate-y-1
+      translate-x-9 sm:translate-x-4 md:translate-x-9 lg:translate-x-12
+    "
             />
           </div>
-          <div className="text-[var(--color-text)] -mt-30 text-center lg:text-left">
+
+          <div className="text-[var(--color-text)]  text-center lg:text-left -translate-y-5">
             <span
               className="rounded-full px-4 sm:px-6 py-2 font-bricolage tracking-wider text-xs sm:text-sm uppercase 
                      bg-[var(--prim-light)] text-[var(--text-color)] border border-[var(--text-light)] shadow-md"
@@ -163,11 +169,90 @@ function About() {
               </span>
             </h2>
             <p className="text-[var(--color-text)] text-[15px] mb-1 mt-7">
-              Oceanis Grand Palace is a place where journeys meet elegance. Inspired by the touch of nature, every detail is crafted to bring harmony, comfort, and timeless experiences. We believe that travel is more than movement it is a story that grows alongside the beauty of the world.
+              Oceanis Grand Palace is a place where journeys meet elegance.
+              Inspired by the touch of nature, every detail is crafted to bring
+              harmony, comfort, and timeless experiences. We believe that travel
+              is more than movement it is a story that grows alongside the
+              beauty of the world.
             </p>
-             <p className="text-[var(--color-text)] text-[15px] mb-4">
-             With the spirit of discovery and a sense of refinement, Oceanis Grand Palace becomes a destination where every moment feels extraordinary. We celebrate the union of luxury and serenity, offering experiences that touch the heart and leave an everlasting impression.
+            <p className="text-[var(--color-text)] text-[15px] mb-4">
+              With the spirit of discovery and a sense of refinement, Oceanis
+              Grand Palace becomes a destination where every moment feels
+              extraordinary. We celebrate the union of luxury and serenity,
+              offering experiences that touch the heart and leave an everlasting
+              impression.
             </p>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start md:items-center gap-4 sm:gap-6">
+              <button
+                className="bg-[var(--text-light)] text-white font-semibold 
+               px-5 sm:px-6 md:px-8 py-2 rounded-full 
+               transition transform hover:scale-105 
+               flex items-center gap-2 text-sm sm:text-base"
+              >
+                <i className="ri-mail-line"></i> Read More
+              </button>
+
+              <button
+                className="px-5 sm:px-7 md:px-8 py-2 rounded-full font-medium 
+               flex items-center gap-2 sm:gap-3 
+               bg-[var(--text-light)] text-white 
+               transition duration-500 overflow-hidden group 
+               transform hover:scale-105 hover:shadow-lg 
+               text-sm sm:text-base"
+              >
+                Book Now <i className="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[var(--prim-light)] py-12 w-full">
+        <div className="w-full lg:w-[95%] mx-auto py-12 px-6 sm:px-10 bg-white rounded-[20px] shadow-2xl relative z-[10]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {/* Card 1 */}
+            <div className="group transition transform hover:scale-105 hover:shadow-[0_0_25px_var(--primary-color)] rounded-xl p-4">
+              <h3 className="text-4xl sm:text-5xl font-bold text-[var(--color-text)] mb-2">
+                <CountUp end={1255} duration={2.5} />
+                <span className="text-[var(--primary-color)]">+</span>
+              </h3>
+              <p className="uppercase text-sm sm:text-base tracking-widest text-[var(--secondary-color)]">
+                Visitors Monthly
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="group transition transform hover:scale-105 hover:shadow-[0_0_25px_var(--primary-color)] rounded-xl p-4">
+              <h3 className="text-4xl sm:text-5xl font-bold text-[var(--color-text)] mb-2">
+                <CountUp end={40} duration={2.5} />
+                <span className="text-[var(--primary-color)]">+</span>
+              </h3>
+              <p className="uppercase text-sm sm:text-base tracking-widest text-[var(--secondary-color)]">
+                Luxury Suites
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="group transition transform hover:scale-105 hover:shadow-[0_0_25px_var(--primary-color)] rounded-xl p-4">
+              <h3 className="text-4xl sm:text-5xl font-bold text-[var(--color-text)] mb-2">
+                <CountUp end={70} duration={2.5} />
+                <span className="text-[var(--primary-color)]">+</span>
+              </h3>
+              <p className="uppercase text-sm sm:text-base tracking-widest text-[var(--secondary-color)]">
+                Premium Facilities
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="group transition transform hover:scale-105 hover:shadow-[0_0_25px_var(--primary-color)] rounded-xl p-4">
+              <h3 className="text-4xl sm:text-5xl font-bold text-[var(--color-text)] mb-2">
+                <CountUp end={30} duration={2.5} />
+                <span className="text-[var(--primary-color)]">+</span>
+              </h3>
+              <p className="uppercase text-sm sm:text-base tracking-widest text-[var(--secondary-color)]">
+                Global Awards
+              </p>
+            </div>
           </div>
         </div>
       </div>
