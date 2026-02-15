@@ -207,13 +207,13 @@ function About() {
         </div>
       </div>
 
-      <div className="bg-[var(--prim-light)] py-12 w-full">
+      <div className="bg-[var(--prim-light)] py-1 mb-3 w-full">
         <div className="w-full lg:w-[95%] mx-auto py-12 px-6 sm:px-10 bg-white rounded-[20px] shadow-2xl relative z-[10]">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {/* Card 1 */}
             <div className="group transition transform hover:scale-105 hover:shadow-[0_0_25px_var(--primary-color)] rounded-xl p-4">
               <h3 className="text-4xl sm:text-5xl font-bold text-[var(--color-text)] mb-2">
-                <CountUp end={1255} duration={2.5} />
+                <CountUp end={1255} duration={1.5} />
                 <span className="text-[var(--primary-color)]">+</span>
               </h3>
               <p className="uppercase text-sm sm:text-base tracking-widest text-[var(--secondary-color)]">
@@ -224,7 +224,7 @@ function About() {
             {/* Card 2 */}
             <div className="group transition transform hover:scale-105 hover:shadow-[0_0_25px_var(--primary-color)] rounded-xl p-4">
               <h3 className="text-4xl sm:text-5xl font-bold text-[var(--color-text)] mb-2">
-                <CountUp end={40} duration={2.5} />
+                <CountUp end={40} duration={1.5} />
                 <span className="text-[var(--primary-color)]">+</span>
               </h3>
               <p className="uppercase text-sm sm:text-base tracking-widest text-[var(--secondary-color)]">
@@ -235,7 +235,7 @@ function About() {
             {/* Card 3 */}
             <div className="group transition transform hover:scale-105 hover:shadow-[0_0_25px_var(--primary-color)] rounded-xl p-4">
               <h3 className="text-4xl sm:text-5xl font-bold text-[var(--color-text)] mb-2">
-                <CountUp end={70} duration={2.5} />
+                <CountUp end={70} duration={1.5} />
                 <span className="text-[var(--primary-color)]">+</span>
               </h3>
               <p className="uppercase text-sm sm:text-base tracking-widest text-[var(--secondary-color)]">
@@ -246,7 +246,7 @@ function About() {
             {/* Card 4 */}
             <div className="group transition transform hover:scale-105 hover:shadow-[0_0_25px_var(--primary-color)] rounded-xl p-4">
               <h3 className="text-4xl sm:text-5xl font-bold text-[var(--color-text)] mb-2">
-                <CountUp end={30} duration={2.5} />
+                <CountUp end={30} duration={1.5} />
                 <span className="text-[var(--primary-color)]">+</span>
               </h3>
               <p className="uppercase text-sm sm:text-base tracking-widest text-[var(--secondary-color)]">

@@ -5,6 +5,7 @@ import Footer from './Components/Footer/Footer';
 import Copyright from './Components/Footer/Copyright';
 import About from './Components/Pages/About';
 import Services from './Components/Pages/Services';
+import Rooms from './Components/Pages/Rooms';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/rooms" element={<Rooms />} />
       </Routes>
       <Footer/>
       <Copyright/>
