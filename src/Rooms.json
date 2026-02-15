@@ -45,7 +45,7 @@
   },
   {
     "id": "5",
-    "type": "Presidential",
+    "type": "Suite",
     "title": "Oceanis Presidential Suite",
     "image": "/Rooms/Room5.jpg",
     "description": "The most suite with a private pool and butler service.",
@@ -89,7 +89,7 @@
   },
   {
     "id": "9",
-    "type": "Luxury",
+    "type": "Presidential",
     "title": "Sky Ocean Lounge Suite",
     "image": "/Rooms/Room9.jpg",
     "description": "An exclusive suite on the upper floor with a 360° ocean view.",
@@ -97,5 +97,27 @@
     "size": "300 ft²",
     "price": 299,
     "photos": ["/Rooms/Room9.jpg","/Rooms/Room9-2.jpg","/Rooms/Room9-3.jpg"]
+  },
+   {
+    "id": "10",
+    "type": "Suite",
+    "title": "Horizon Suite",
+    "image": "/Rooms/Room10.png",
+    "description": "Modern comfort with endless sea views.",
+    "adults": 2,
+    "size": "300 ft²",
+    "price": 229,
+    "photos": ["/Rooms/Room10.png","/Rooms/Room10-2.png","/Rooms/Room10-3.png"]
+  },
+   {
+    "id": "11",
+    "type": "Presidential",
+    "title": "Celeste Chamber Lounge Suite",
+    "image": "/Rooms/Room11.png",
+    "description": "Elegant retreat framed by the horizon.",
+    "adults": 2,
+    "size": "300 ft²",
+    "price": 399,
+    "photos": ["/Rooms/Room11.png","/Rooms/Room11-2.png","/Rooms/Room11-3.png"]
   }
 ]

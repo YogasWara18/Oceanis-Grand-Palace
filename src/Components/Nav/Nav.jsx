@@ -25,8 +25,8 @@ function Nav() {
         className={`px-[8%] h-[100px] w-full fixed top-5 left-0 lg:left-10 rounded-2xl lg:w-[95%] flex justify-between items-center z-[9999] transition-all duration-300 border border-[#36c6c2] 
     ${
       isScrolled
-        ? "bg-[#111111] text-white shadow-2xl scale-[1.01] border-opacity-70"
-        : "bg-white shadow-md border-opacity-40"
+        ? "bg-[#204f5e] text-white shadow-2xl scale-[1.01] border-opacity-70"
+        : "bg-white text-black shadow-md border-opacity-40"
     } 
     hover:shadow-[0_8px_30px_rgba(54,198,194,0.4)]`}
       >
@@ -40,7 +40,12 @@ function Nav() {
 
         {/* Menu Navbar */}
         <ul
-          className={`menu flex-col lg:flex-row lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white md:pl-5 md:py-4 lg:bg-transparent z-50 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"} lg:max-h-full lg:opacity-100 gap-10 text-sm font-medium font-oswald leading-loose`}
+          className={`menu flex-col lg:flex-row lg:flex absolute lg:static top-full left-0 w-full lg:w-auto 
+  bg-[#204f5e] md:pl-5 md:py-4 lg:bg-transparent z-50 
+  transition-all duration-300 ease-in-out overflow-hidden 
+  ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"} 
+  lg:max-h-full lg:opacity-100 gap-10 text-sm font-medium font-oswald leading-loose 
+  items-center justify-center text-center`}
         >
           <li>
             <Link
@@ -152,9 +157,9 @@ function Nav() {
               {/* Title */}
               <h2 className="flex justify-center mb-8">
                 <img
-                  src="/Logo-Oceanis.png" 
+                  src="/Logo-Oceanis.png"
                   alt="Oceanis Grand Palace Logo"
-                  className="w-20 h-auto" 
+                  className="w-20 h-auto"
                 />
               </h2>
 
@@ -206,7 +211,7 @@ function Nav() {
                   />
                 </div>
 
-                 {/* Rooms */}
+                {/* Rooms */}
                 <div>
                   <label className="block text-sm font-semibold text-[#204f5e] uppercase mb-2">
                     <i className="ri-home-2-line text-[#36c6c2]"></i> Rooms
