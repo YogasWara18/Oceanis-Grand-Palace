@@ -39,7 +39,6 @@ import blog3 from "../../assets/Blog3.png";
 import blog4 from "../../assets/Blog4.png";
 import blog5 from "../../assets/Blog5.png";
 import blog6 from "../../assets/Blog6.png";
-import { div } from "framer-motion/client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
@@ -53,7 +52,15 @@ function Index() {
 
   const [activeTab, setActiveTab] = useState("All");
 
-  const tabs = ["All", "Economy", "Standard", "Luxury"];
+  const tabs = [
+    "All",
+    "Economy",
+    "Deluxe",
+    "Suite",
+    "Family",
+    "Presidential",
+    "Luxury",
+  ];
 
   const filteredRooms =
     activeTab === "All"
@@ -499,15 +506,15 @@ function Index() {
 
       <div className="w-full lg:px-[12%] px-[8%] pb-[100px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {filteredRooms.map((rooms) => (
+          {filteredRooms.map((room) => (
             <div
-              key={rooms.id}
+              key={room.id}
               className="show-rooms rounded-2xl overflow-hidden flex flex-col 
-                 bg-[rgba(255,255,255,0.35)] backdrop-blur-xl 
-                 border border-[var(--primary-color)] 
-                 shadow-lg transition-all duration-500 
-                 hover:shadow-[0_0_25px_var(--primary-color),0_0_50px_var(--primary-color)] 
-                 hover:border-[var(--text-light)] hover:scale-[1.02]"
+               bg-[rgba(255,255,255,0.35)] backdrop-blur-xl 
+               border border-[var(--primary-color)] 
+               shadow-lg transition-all duration-500 ease-in-out
+               hover:shadow-[0_0_25px_var(--primary-color),0_0_50px_var(--primary-color)] 
+               hover:border-[var(--text-light)] hover:scale-[1.02]"
             >
               {/* Image Slider */}
               <div className="relative">
@@ -516,11 +523,11 @@ function Index() {
                   pagination={{ clickable: true }}
                   className="w-full h-[280px]"
                 >
-                  {rooms.photos.map((photo, index) => (
+                  {room.photos.map((photo, index) => (
                     <SwiperSlide key={index}>
                       <img
                         src={photo}
-                        alt={`${rooms.title} ${index + 1}`}
+                        alt={`${room.title} ${index + 1}`}
                         className="w-full h-[280px] object-cover transition-opacity duration-500 hover:opacity-90"
                       />
                     </SwiperSlide>
@@ -531,43 +538,45 @@ function Index() {
               {/* Adults & Size Info Bar */}
               <div
                 className="bg-[rgba(54,198,194,0.12)] backdrop-blur-md 
-                      border-t border-[var(--primary-color)] 
-                      flex justify-center items-center gap-6 py-3"
+                    border-t border-[var(--primary-color)] 
+                    flex justify-center items-center gap-6 py-3"
               >
-                <span className="flex items-center gap-2">
-                  <i className="bg-white/80 shadow rounded px-3 py-1 text-sm text-[var(--text-light)] ri-user-line">
-                    Adults : {rooms.adults}
-                  </i>
+                <span className="flex items-center gap-2 text-sm text-[var(--text-light)]">
+                  <i className="ri-user-line"></i> Adults: {room.adults}
                 </span>
-                <span className="flex items-center gap-2">
-                  <i className="bg-white/80 shadow rounded px-3 py-1 text-sm text-[var(--text-light)] ri-aspect-ratio-line">
-                    Size : {rooms.size}
-                  </i>
+                <span className="flex items-center gap-2 text-sm text-[var(--text-light)]">
+                  <i className="ri-aspect-ratio-line"></i> Size: {room.size}
                 </span>
               </div>
 
               {/* Content */}
-              <Link to={`/rooms/${rooms.id}`} className="flex-1">
-                <div className="px-6 pt-6 pb-6 text-center flex flex-col items-center">
-                  {/* Heading & Description */}
-                  <h3 className="text-2xl font-semibold text-[var(--primary-color)] mb-2 tracking-wide transition-colors duration-300 hover:text-[var(--text-light)]">
-                    {rooms.title}
+              <div className="px-6 pt-6 pb-6 text-center flex flex-col items-center flex-1">
+                <Link to={`/rooms/${room.id}`} className="w-full">
+                  <h3
+                    className="text-2xl font-semibold text-[var(--primary-color)] mb-2 tracking-wide 
+                       transition-colors duration-300 hover:text-[var(--text-light)]"
+                  >
+                    {room.title}
                   </h3>
-                  <p className="text-md text-[#204f5e] max-w-[80%] mx-auto leading-relaxed mb-6">
-                    {rooms.description}
+                  <p className="text-md text-[var(--black-color)] max-w-[80%] mx-auto leading-relaxed mb-6">
+                    {room.description}
                   </p>
+                </Link>
 
-                  {/* Price & Button */}
-                  <div className="mt-4 flex items-center justify-between w-full px-2">
-                    <p className="text-xl font-bold text-[var(--text-color)] tracking-wide">
-                      ${rooms.price}
-                    </p>
-                    <button className="w-12 h-12 bg-[var(--primary-color)] rounded-full flex items-center justify-center text-white text-xl shadow-md hover:bg-[var(--text-light)] hover:shadow-lg hover:ring-2 hover:ring-[var(--primary-color)] transition-all duration-300">
-                      <i className="ri-bookmark-line"></i>
-                    </button>
-                  </div>
+                {/* Price & Button */}
+                <div className="mt-4 flex items-center justify-between w-full px-2">
+                  <p className="text-xl font-bold text-[var(--text-color)] tracking-wide">
+                    ${room.price}
+                  </p>
+                  <button
+                    className="w-12 h-12 bg-[var(--primary-color)] rounded-full flex items-center justify-center 
+                           text-white text-xl shadow-md hover:bg-[var(--text-light)] hover:shadow-lg 
+                           hover:ring-2 hover:ring-[var(--primary-color)] transition-all duration-300 ease-in-out"
+                  >
+                    <i className="ri-bookmark-line"></i>
+                  </button>
                 </div>
-              </Link>
+              </div>
             </div>
           ))}
         </div>
