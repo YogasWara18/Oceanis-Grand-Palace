@@ -26,7 +26,7 @@ import feature12 from "../../assets/feature12.png";
 function Services() {
   return (
     <>
-      <div className="section-banner relative flex items-center justify-center">
+    <div className="section-banner relative flex items-center justify-center">
         <img
           src={serviceImg}
           alt="Section-about"

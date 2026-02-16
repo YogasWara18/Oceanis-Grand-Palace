@@ -422,11 +422,56 @@ const RoomsDetails = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-[var(--primary-color)] text-white font-oswald font-bold py-2 rounded-lg hover:bg-[var(--secondary-color)] transition-all"
+                  className="px-6 py-2 sm:px-8 sm:py-3 rounded-full font-medium flex items-center justify-center gap-2 sm:gap-3 
+    bg-[var(--text-light)] text-[var(--white-color)] transition duration-500 overflow-hidden group 
+    transform hover:scale-105 hover:shadow-lg"
                 >
                   Book Now
                 </button>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="cta px-[50px] bg-[var(--prim-light)]">
+        <div className="py-[20px] rounded-xl bg-white shadow-xl flex items-center justify-center">
+          <div className="section-title text-center space-y-4 max-w-4xl">
+            {/* Badge */}
+            <span
+              className="rounded-full px-6 py-2 font-bricolage tracking-wider text-sm uppercase 
+                   bg-[var(--prim-light)] text-[var(--text-color)] border border-[var(--text-light)] shadow-md"
+            >
+              24/7 Concierge Service
+            </span>
+
+            {/* Heading */}
+            <h1
+              className="text-3xl sm:text-4xl md:text-4xl font-bold font-[var(--Oswald-font)] 
+                   text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
+                   drop-shadow-[0_3px_8px_var(--prim-light)] [text-shadow:2px_2px_0_var(--text-color)]"
+            >
+              Always Here for You
+            </h1>
+
+            {/* Description */}
+            <p className="font-arimo text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              At Oceanis Grand Palace, every guest is embraced with seamless
+              support and refined hospitality. Whether day or night, our team
+              ensures your journey remains effortless, luxurious, and truly
+              memorable.
+            </p>
+
+            {/* CTA Button (centered) */}
+            <div className="flex justify-center">
+              <button
+                className="px-6 py-2 sm:px-8 sm:py-3 rounded-full font-medium flex items-center gap-2 sm:gap-3 
+          bg-[var(--text-light)] text-[var(--white-color)] transition duration-500 overflow-hidden group 
+          transform hover:scale-105 hover:shadow-lg"
+              >
+                Contact Us
+              </button>
             </div>
           </div>
         </div>
