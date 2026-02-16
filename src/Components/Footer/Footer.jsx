@@ -17,16 +17,16 @@ function Footer() {
             <img
               src="/Logo-Oceanis.png"
               alt="Oceanis Grand Palace Logo"
-              className="h-20 w-auto object-contain mx-auto lg:mx-12"
+              className="h-40 w-auto -translate-y-14 object-contain mx-auto lg:mx-12"
             />
           </Link>
-          <p className="mt-4 text-sm text-[var(--text-light)] font-[var(--Arimo-font)]">
+          <p className="text-sm -translate-y-24 text-[var(--text-light)] font-[var(--Arimo-font)]">
             Experience luxury redefined by the Oceanis Grand Palace.
           </p>
 
           {/* Social Media */}
           <div className="mt-2">
-            <div className="flex justify-center lg:justify-start gap-8">
+            <div className="flex -translate-y-20 justify-center lg:justify-start gap-8">
               {[
                 { icon: socialIcon1, label: "YouTube" },
                 { icon: socialIcon2, label: "Instagram" },

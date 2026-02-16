@@ -12,14 +12,14 @@ function Copyright() {
           <img
             src="/Logo-Oceanis.png"
             alt="Oceanis Grand Palace"
-            width={100}
+            width={150}
             height={50}
-            className="object-contain drop-shadow-md hover:drop-shadow-xl transition-all duration-300"
+            className="object-contain drop-shadow-md hover:drop-shadow-xl translate-y-10 transition-all duration-300"
           />
         </Link>
 
         {/* Social Media */}
-        <div className="flex space-x-6 text-2xl">
+        <div className="flex  space-x-6 text-2xl">
           <a
             href="https://github.com/YogasWara18"
             target="_blank"

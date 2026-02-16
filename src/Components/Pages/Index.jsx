@@ -846,10 +846,7 @@ function Index() {
         {/* Blogs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full text-left">
           <div
-            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
-                  shadow-[0_6px_25px_var(--primary-color)] 
-                  hover:shadow-[0_10px_35px_var(--primary-color)] 
-                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden border border-[var(--primary-color)] shadow-inner transition-all duration-500 ease-in-outhover:shadow-[0_0_25px_var(--primary-color),0_0_50px_var(--primary-color)] hover:border-[var(--primary-color)] hover:scale-[1.02] hover:shadow-[0_10px_35px_var(--primary-color)] group p-5 backdrop-blur-xl"
           >
             {/* Image */}
             <div className="overflow-hidden rounded-t-[20px]">
@@ -905,10 +902,7 @@ function Index() {
             </div>
           </div>
           <div
-            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
-                  shadow-[0_6px_25px_var(--primary-color)] 
-                  hover:shadow-[0_10px_35px_var(--primary-color)] 
-                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+           className="bg-[var(--white-color)] rounded-[24px] overflow-hidden border border-[var(--primary-color)] shadow-inner transition-all duration-500 ease-in-outhover:shadow-[0_0_25px_var(--primary-color),0_0_50px_var(--primary-color)] hover:border-[var(--primary-color)] hover:scale-[1.02] hover:shadow-[0_10px_35px_var(--primary-color)] group p-5 backdrop-blur-xl"
           >
             {/* Image */}
             <div className="overflow-hidden rounded-t-[20px]">
@@ -964,10 +958,7 @@ function Index() {
             </div>
           </div>
           <div
-            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
-                  shadow-[0_6px_25px_var(--primary-color)] 
-                  hover:shadow-[0_10px_35px_var(--primary-color)] 
-                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden border border-[var(--primary-color)] shadow-inner transition-all duration-500 ease-in-outhover:shadow-[0_0_25px_var(--primary-color),0_0_50px_var(--primary-color)] hover:border-[var(--primary-color)] hover:scale-[1.02] hover:shadow-[0_10px_35px_var(--primary-color)] group p-5 backdrop-blur-xl"
           >
             {/* Image */}
             <div className="overflow-hidden rounded-t-[20px]">
@@ -1023,10 +1014,7 @@ function Index() {
             </div>
           </div>
           <div
-            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
-                  shadow-[0_6px_25px_var(--primary-color)] 
-                  hover:shadow-[0_10px_35px_var(--primary-color)] 
-                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+           className="bg-[var(--white-color)] rounded-[24px] overflow-hidden border border-[var(--primary-color)] shadow-inner transition-all duration-500 ease-in-outhover:shadow-[0_0_25px_var(--primary-color),0_0_50px_var(--primary-color)] hover:border-[var(--primary-color)] hover:scale-[1.02] hover:shadow-[0_10px_35px_var(--primary-color)] group p-5 backdrop-blur-xl"
           >
             {/* Image */}
             <div className="overflow-hidden rounded-t-[20px]">
@@ -1082,10 +1070,7 @@ function Index() {
             </div>
           </div>
           <div
-            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
-                  shadow-[0_6px_25px_var(--primary-color)] 
-                  hover:shadow-[0_10px_35px_var(--primary-color)] 
-                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden border border-[var(--primary-color)] shadow-inner transition-all duration-500 ease-in-outhover:shadow-[0_0_25px_var(--primary-color),0_0_50px_var(--primary-color)] hover:border-[var(--primary-color)] hover:scale-[1.02] hover:shadow-[0_10px_35px_var(--primary-color)] group p-5 backdrop-blur-xl"
           >
             {/* Image */}
             <div className="overflow-hidden rounded-t-[20px]">
@@ -1141,10 +1126,7 @@ function Index() {
             </div>
           </div>
           <div
-            className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
-                  shadow-[0_6px_25px_var(--primary-color)] 
-                  hover:shadow-[0_10px_35px_var(--primary-color)] 
-                  transition-all duration-500 group p-5 backdrop-blur-xl border border-[var(--prim-light)]"
+           className="bg-[var(--white-color)] rounded-[24px] overflow-hidden border border-[var(--primary-color)] shadow-inner transition-all duration-500 ease-in-outhover:shadow-[0_0_25px_var(--primary-color),0_0_50px_var(--primary-color)] hover:border-[var(--primary-color)] hover:scale-[1.02] hover:shadow-[0_10px_35px_var(--primary-color)] group p-5 backdrop-blur-xl"
           >
             {/* Image */}
             <div className="overflow-hidden rounded-t-[20px]">

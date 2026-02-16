@@ -34,7 +34,7 @@ function Nav() {
           <img
             src="/Logo-Oceanis.png"
             alt="Oceanis Hotel Logo"
-            className="h-[90px] w-auto object-contain transition-transform duration-300 hover:scale-105"
+            className="h-[150px] w-auto object-contain transition-transform duration-300 hover:scale-105"
           />
         </Link>
 
