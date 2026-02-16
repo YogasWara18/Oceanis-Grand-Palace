@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import roomsImg from "../../assets/RoomDetails-bg.jpg";
 
@@ -26,6 +26,19 @@ import "swiper/css/navigation";
 const RoomsDetails = () => {
   const { id } = useParams();
   const room = RoomsData.find((room) => room.id === id);
+
+  const [guests, setGuests] = useState(1);
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
+
+  // hitung total harga
+  const nights =
+    checkIn && checkOut
+      ? Math.ceil(
+          (new Date(checkOut) - new Date(checkIn)) / (1000 * 60 * 60 * 24),
+        )
+      : 0;
+  const totalPrice = nights > 0 ? room.price * nights : room.price;
 
   if (!room) {
     return <div className="text-center py-20 text-xl">Room not Found?</div>;
@@ -56,7 +69,7 @@ const RoomsDetails = () => {
       {/* Show Rooms Details */}
       <div className="w-full min-h-screen py-[100px] px-[6%] lg:px-[10%] bg-[var(--prim-light)] bg-gradient-to-b from-[var(--prim-light)] to-white">
         <h2
-          className="text-3xl sm:text-4xl md:text-5xl font-bold font-[var(--Oswald-font)] flex items-center gap-6 text-transparent bg-clip-text 
+          className="text-3xl sm:text-4xl mb-4 md:text-5xl font-bold font-[var(--Oswald-font)] flex items-center gap-6 text-transparent bg-clip-text 
                      bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
                      drop-shadow-[0_3px_8px_var(--prim-light)] 
                      [text-shadow:2px_2px_0_var(--text-color)] border-b-2 border-[var(--text-color)] pb-4"
@@ -90,10 +103,12 @@ const RoomsDetails = () => {
 
             {/* Features */}
             <div>
-              <h2 className="text-3xl mb-4 sm:text-4xl md:text-4xl font-bold font-[var(--Oswald-font)] flex items-center gap-6 text-transparent bg-clip-text 
+              <h2
+                className="text-3xl mb-4 sm:text-4xl md:text-4xl font-bold font-[var(--Oswald-font)] flex items-center gap-6 text-transparent bg-clip-text 
                      bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
                      drop-shadow-[0_3px_8px_var(--prim-light)] 
-                     [text-shadow:2px_2px_0_var(--text-color)]">
+                     [text-shadow:2px_2px_0_var(--text-color)]"
+              >
                 Key Features
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -163,10 +178,12 @@ const RoomsDetails = () => {
 
             {/* Amenities */}
             <div>
-              <h2 className="text-3xl mb-4 sm:text-4xl md:text-4xl font-bold font-[var(--Oswald-font)] flex items-center gap-6 text-transparent bg-clip-text 
+              <h2
+                className="text-3xl mb-4 sm:text-4xl md:text-4xl font-bold font-[var(--Oswald-font)] flex items-center gap-6 text-transparent bg-clip-text 
                      bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
                      drop-shadow-[0_3px_8px_var(--prim-light)] 
-                     [text-shadow:2px_2px_0_var(--text-color)]">
+                     [text-shadow:2px_2px_0_var(--text-color)]"
+              >
                 Amenities
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
@@ -258,33 +275,159 @@ const RoomsDetails = () => {
             </div>
           </div>
 
-          {/* Right side: Description only */}
-          <div className="w-full lg:w-1/3 flex flex-col gap-3">
-            <h2 className="text-3xl mb-4 mt-5 sm:text-4xl md:text-4xl font-bold font-[var(--Oswald-font)] flex items-center gap-6 text-transparent bg-clip-text 
+          {/* Right side: Booking & Description */}
+          <div className="w-full lg:w-1/3 flex flex-col gap-6">
+            {/* Description */}
+            <div className="flex flex-col gap-3">
+              <h2
+                className="text-2xl mb-5 md:text-3xl font-bold font-[var(--Oswald-font)] flex items-center gap-6 text-transparent bg-clip-text 
                      bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
                      drop-shadow-[0_3px_8px_var(--prim-light)] 
-                     [text-shadow:2px_2px_0_var(--text-color)]">
-              Description
-            </h2>
-            <p className="font-arimo text-sm md:text-base text-gray-700 leading-snug">
-              Oceanis Grand Palace presents a sanctuary of timeless luxury,
-              blending cinematic interiors with modern comfort and Indonesian
-              artistry.
-            </p>
-            <p className="font-arimo text-sm md:text-base text-gray-700 leading-snug">
-              Each room is designed with premium bedding, elegant furnishings,
-              and panoramic views that create an exclusive and memorable stay.
-            </p>
-            <p className="font-arimo text-sm md:text-base text-gray-700 leading-snug">
-              Guests enjoy seamless connectivity, refined dining, and
-              personalized services, ensuring both leisure and business
-              travelers feel at home.
-            </p>
-            <p className="font-arimo text-sm md:text-base text-gray-700 leading-snug">
-              Whether for a romantic escape, a family holiday, or a
-              distinguished business trip, Oceanis Grand Palace embodies
-              sophistication and warmth.
-            </p>
+                     [text-shadow:2px_2px_0_var(--text-color)]"
+              >
+                Description
+              </h2>
+              <p className="font-arimo text-sm md:text-base text-gray-700 leading-snug">
+                Oceanis Grand Palace presents a sanctuary of timeless luxury,
+                blending cinematic interiors with modern comfort and Indonesian
+                artistry.
+              </p>
+              <p className="font-arimo text-sm md:text-base text-gray-700 leading-snug">
+                Each room is designed with premium bedding, elegant furnishings,
+                and panoramic views that create an exclusive and memorable stay.
+              </p>
+              <p className="font-arimo text-sm md:text-base text-gray-700 leading-snug">
+                Guests enjoy seamless connectivity, refined dining, and
+                personalized services, ensuring both leisure and business
+                travelers feel at home.
+              </p>
+              <p className="font-arimo text-sm md:text-base text-gray-700 leading-snug">
+                Whether for a romantic escape, a family holiday, or a
+                distinguished business trip, Oceanis Grand Palace embodies
+                sophistication and warmth.
+              </p>
+              <p className="font-arimo text-sm md:text-base text-gray-700 leading-snug">
+                Every stay is enriched with thoughtful amenities and attentive
+                hospitality, allowing guests to immerse themselves in a refined
+                atmosphere where luxury and Indonesian artistry harmoniously
+                converge.
+              </p>
+            </div>
+
+            {/* Booking Form */}
+            <div className="bg-white shadow-lg rounded-2xl p-6 md:p-8">
+              <h2
+                className="text-2xl md:text-3xl font-bold font-[var(--Oswald-font)] flex items-center gap-6 text-transparent bg-clip-text 
+                     bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
+                     drop-shadow-[0_3px_8px_var(--prim-light)] 
+                     [text-shadow:2px_2px_0_var(--text-color)] mb-4"
+              >
+                Book This Room
+              </h2>
+              <form className="flex flex-col gap-4">
+                {/* Guest Name */}
+                <div>
+                  <label className="block text-sm font-arimo text-gray-700 mb-1">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
+                  />
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label className="block text-sm font-arimo text-gray-700 mb-1">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
+                  />
+                </div>
+
+                {/* Check-in / Check-out */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-arimo text-gray-700 mb-1">
+                      Check-in
+                    </label>
+                    <input
+                      type="date"
+                      value={checkIn}
+                      onChange={(e) => setCheckIn(e.target.value)}
+                      className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-arimo text-gray-700 mb-1">
+                      Check-out
+                    </label>
+                    <input
+                      type="date"
+                      value={checkOut}
+                      onChange={(e) => setCheckOut(e.target.value)}
+                      className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
+                    />
+                  </div>
+                </div>
+
+                {/* Guests */}
+                <div>
+                  <label className="block text-sm font-arimo text-gray-700 mb-1">
+                    Guests
+                  </label>
+                  <input
+                    type="number"
+                    min="1"
+                    max={room.adults}
+                    value={guests}
+                    onChange={(e) => setGuests(e.target.value)}
+                    className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">
+                    Max {room.adults} adults
+                  </p>
+                </div>
+
+                {/* Room Type (langsung dari JSON) */}
+                <div>
+                  <label className="block text-sm font-arimo text-gray-700 mb-1">
+                    Room Type
+                  </label>
+                  <select
+                    value={room.id}
+                    disabled
+                    className="w-full border rounded-lg px-3 py-2 text-sm bg-gray-100 cursor-not-allowed"
+                  >
+                    <option>
+                      {room.title} - ${room.price}/night
+                    </option>
+                  </select>
+                </div>
+
+                {/* Price Display */}
+                <div className="flex items-center justify-between bg-[var(--prim-light)] rounded-lg px-4 py-3">
+                  <span className="font-oswald text-[var(--text-color)] text-lg">
+                    Total Price
+                  </span>
+                  <span className="font-bold text-[var(--black-color)]">
+                    ${totalPrice}
+                  </span>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-full bg-[var(--primary-color)] text-white font-oswald font-bold py-2 rounded-lg hover:bg-[var(--secondary-color)] transition-all"
+                >
+                  Book Now
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
