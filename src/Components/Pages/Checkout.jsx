@@ -147,45 +147,78 @@ const Checkout = () => {
           </div>
 
           {/* Booking Summary */}
-          <div className="bg-gradient-to-br from-[rgba(255,255,255,0.85)] to-[rgba(255,255,255,0.65)] backdrop-blur-xl rounded-2xl shadow-lg p-6 space-y-4 border border-[var(--primary-color)]">
+          <div className="bg-gradient-to-br from-[var(--prim-light)] to-[rgba(255,255,255,0.85)] backdrop-blur-2xl rounded-3xl shadow-xl p-8 space-y-6 border border-[var(--primary-color)] transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
             <img
               src={room.photos[0]}
               alt={room.title}
-              className="rounded-xl mb-4 w-full h-[200px] object-cover"
+              className="rounded-2xl mb-6 w-full h-[240px] object-cover shadow-md transition-transform duration-500 hover:scale-[1.03]"
             />
-            <div className="flex justify-between text-sm text-gray-600 mb-2 px-1 mt-3">
+
+            <div className="flex justify-between text-sm text-[var(--text-light)] mb-4 px-1 mt-2 font-[var(--Arimo-font)] tracking-wide">
               <div className="flex items-center gap-2">
-                <i className="ri-user-line"></i> Adults: {room.adults}
+                <i className="ri-user-line text-[var(--primary-color)]"></i>
+                Adults: {room.adults}
               </div>
               <div className="flex items-center gap-2">
-                <i className="ri-expand-left-right-line"></i> Size: {room.size}
+                <i className="ri-expand-left-right-line text-[var(--primary-color)]"></i>
+                Size: {room.size}
               </div>
             </div>
-            <h3 className="text-lg font-semibold text-gray-800 mt-3">{room.title}</h3>
 
-            <div className="mt-4 space-y-3 text-sm text-gray-600 border-t border-gray-200 pt-4">
-                <p className="flex justify-between"><span>Check In Date:</span><span>2025-07-03</span></p>
-                <p className="flex justify-between"><span>Check Out Date:</span><span>2025-07-04</span></p>
-                <p className="flex justify-between"><span>Total Nights:</span><span>1</span></p>
-                <p className="flex justify-between font-bold text-lg"><span>Total Cost:</span><span className="text-[#205f5e]">${room.price}</span></p>
+            <h3 className="text-2xl font-semibold text-[var(--primary-color)] mt-3 font-[var(--Oswald-font)] tracking-wide">
+              {room.title}
+            </h3>
+
+            <div className="mt-6 space-y-3 text-sm text-[#204f5e] border-t border-[var(--secondary-color)] pt-6 font-[var(--Arimo-font)]">
+              <p className="flex justify-between">
+                <span>Check In Date:</span>
+                <span>2025-07-03</span>
+              </p>
+              <p className="flex justify-between">
+                <span>Check Out Date:</span>
+                <span>2025-07-04</span>
+              </p>
+              <p className="flex justify-between">
+                <span>Total Nights:</span>
+                <span>1</span>
+              </p>
+              <p className="flex justify-between font-bold text-lg">
+                <span>Total Cost:</span>
+                <span className="text-[var(--primary-color)] font-[var(--Oswald-font)] tracking-wide">
+                  ${room.price}
+                </span>
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-[9999]">
-            <div className="bg-white rounded-2xl p-8 w-[90%] max-w-md shadow-lg text-center relative">
-                <h2 className="text-3xl font-bold text-[#205f5e] mb-4">Booking Confirmed!</h2>
-                <p className="text-gray-600">Thank you your reservation <br /> A confirmation mail has been sent to you </p>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+          <div className="bg-gradient-to-br from-[var(--prim-light)] to-[rgba(255,255,255,0.9)] backdrop-blur-2xl rounded-3xl p-10 w-[90%] max-w-md shadow-2xl text-center relative border border-[var(--primary-color)] transition-all duration-500">
+            <h2 className="text-3xl font-bold text-[var(--primary-color)] mb-5 font-[var(--Oswald-font)] tracking-wide">
+              Booking Confirmed!
+            </h2>
 
-                <button className="mt-6 bg-[#f9f9f9] hover:bg-[#204f5e] text-white px-6 py-2 rounded-full" onClick={() => setShowModal(false)}>
-                    Close                    
-                </button>
-                <button className="absolute top-3 right-4 text-gray-500 hover:text-black text-2xl" onClick={() => setShowModal(false)}>
-                     &times;                  
-                </button>
-            </div>
+            <p className="text-[var(--color-text)] font-[var(--Arimo-font)] leading-relaxed">
+              Thank you for your reservation <br />A confirmation mail has been
+              sent to you
+            </p>
+
+            <button
+              className="mt-8 bg-[var(--text-light)] hover:scale-105 text-white px-8 py-3 rounded-full font-[var(--Oswald-font)] tracking-wide shadow-md transition-all duration-300"
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+
+            <button
+              className="absolute top-4 right-5 text-[var(--text-light)] hover:text-[var(--black-color)] text-2xl transition-colors duration-300"
+              onClick={() => setShowModal(false)}
+            >
+              &times;
+            </button>
+          </div>
         </div>
       )}
     </>
