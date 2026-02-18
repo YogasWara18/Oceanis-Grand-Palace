@@ -277,8 +277,7 @@ function Blog() {
           </div>
         </div>
 
-        <div
-          className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
+        <div className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
                border border-[var(--primary-color)] shadow-inner 
                transition-all duration-500 ease-in-out group 
                hover:scale-[1.02] hover:shadow-[0_10px_35px_var(--primary-color)] 

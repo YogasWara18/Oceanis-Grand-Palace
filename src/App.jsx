@@ -9,6 +9,7 @@ import Rooms from './Components/Pages/Rooms';
 import RoomsDetails from './Components/Pages/RoomsDetails';
 import Checkout from './Components/Pages/Checkout';
 import Blog from './Components/Pages/Blog';
+import Contact from './Components/Pages/Contact';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/rooms/:id" element={<RoomsDetails />} />
         <Route path="/checkout/:id" element={<Checkout />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer/>
       <Copyright/>
