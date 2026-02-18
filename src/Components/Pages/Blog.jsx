@@ -201,13 +201,14 @@ function Blog() {
           Our Blog
         </span>
         <h2
-          className="text-3xl mb-3 -mt-7 sm:text-4xl font-bold font-[var(--Oswald-font)] text-transparent bg-clip-text
-                      bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
-                     drop-shadow-[0_3px_8px_var(--prim-light)] 
-                     [text-shadow:2px_2px_0_var(--text-color)]"
-        >
-          Latest Blog Publications
-        </h2>
+  className="text-2xl sm:text-3xl md:text-4xl mb-3 -mt-5 sm:-mt-7 font-bold font-[var(--Oswald-font)] 
+             text-transparent bg-clip-text whitespace-nowrap
+             bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
+             drop-shadow-[0_3px_8px_var(--prim-light)] 
+             [text-shadow:2px_2px_0_var(--text-color)]"
+>
+  Latest Blog Publications
+</h2>
       </div>
 
       {/* Blog Grid */}

@@ -139,13 +139,7 @@ function Index() {
           </span>
 
           {/* Heading */}
-          <h1
-            className="tagline-text text-2xl sm:text-4xl lg:text-5xl font-bold 
-                     text-[#36c6c2] leading-tight tracking-wide 
-                     font-[var(--Oswald-font)] text-shadow-white"
-          >
-            Experience Light Live Tranquility
-          </h1>
+          <h1 className="tagline-text text-lg sm:text-4xl lg:text-5xl font-bold text-[#36c6c2] leading-tight tracking-wide font-[var(--Oswald-font)] text-shadow-white whitespace-nowrap text-center sm:text-left">Experience Light Live Tranquility</h1>
 
           {/* Reservation Form */}
           <form
@@ -508,13 +502,7 @@ function Index() {
           {filteredRooms.map((room) => (
             <div
               key={room.id}
-              className="show-rooms rounded-2xl overflow-hidden flex flex-col
-    bg-gradient-to-br from-[rgba(255,255,255,0.45)] to-[rgba(255,255,255,0.25)]
-    backdrop-blur-xl border border-[var(--primary-color)]
-    shadow-lg shadow-inner transition-all duration-500 ease-in-out
-    hover:shadow-[0_0_25px_var(--primary-color),0_0_50px_var(--primary-color)]
-    hover:border-[var(--text-light)] hover:scale-[1.02]"
-            >
+              className="show-rooms rounded-2xl overflow-hidden flex flex-col bg-gradient-to-br from-[rgba(255,255,255,0.45)] to-[rgba(255,255,255,0.25)] backdrop-blur-xl border border-[var(--primary-color)] shadow-lg shadow-inner transition-all duration-500 ease-in-out hover:shadow-[0_0_25px_var(--primary-color),0_0_50px_var(--primary-color)] hover:border-[var(--text-light)] hover:scale-[1.02]">
               {/* Image Slider */}
               <div className="relative rounded-t-2xl border-b border-[var(--prim-light)]">
                 <Swiper
@@ -536,9 +524,7 @@ function Index() {
 
               {/* Adults & Size Info Bar */}
               <div
-                className="bg-gradient-to-r from-[rgba(54,198,194,0.12)] to-[rgba(42,212,170,0.08)]
-      backdrop-blur-md border-t border-[var(--primary-color)]
-      flex justify-center items-center gap-6 py-3 tracking-wide"
+                className="bg-gradient-to-r from-[rgba(54,198,194,0.12)] to-[rgba(42,212,170,0.08)] backdrop-blur-md border-t border-[var(--primary-color)] flex justify-center items-center gap-6 py-3 tracking-wide"
               >
                 <span className="flex items-center gap-2 text-sm text-[var(--text-light)]">
                   <i className="ri-user-line"></i> Adults: {room.adults}
@@ -551,10 +537,7 @@ function Index() {
               {/* Content */}
               <div className="px-6 pt-6 pb-6 text-center flex flex-col items-center flex-1">
                 <Link to={`/rooms/${room.id}`} className="w-full">
-                  <h3
-                    className="text-2xl font-semibold text-[var(--primary-color)] mb-2 tracking-wide
-        transition-colors duration-300 hover:text-[var(--text-light)] hover:animate-pulse"
-                  >
+                  <h3 className="text-2xl font-semibold text-[var(--primary-color)] mb-2 tracking-wide transition-colors duration-300 hover:text-[var(--text-light)] hover:animate-pulse">
                     {room.title}
                   </h3>
                   <p className="text-md text-[var(--black-color)] max-w-[80%] mx-auto leading-relaxed mb-6 line-clamp-3">
@@ -567,12 +550,7 @@ function Index() {
                   <p className="text-xl font-bold text-[var(--text-color)] tracking-wide drop-shadow-[0_0_5px_var(--prim-light)]">
                     ${room.price}
                   </p>
-                  <button
-                    className="w-12 h-12 bg-[var(--primary-color)] rounded-full flex items-center justify-center
-          text-white text-xl shadow-md hover:bg-[var(--text-light)] hover:shadow-lg
-          hover:ring-2 hover:ring-[var(--primary-color)] hover:ring-offset-2 hover:ring-offset-[var(--prim-light)]
-          transition-all duration-300 ease-in-out"
-                  >
+                  <button className="w-12 h-12 bg-[var(--primary-color)] rounded-full flex items-center justify-center text-white text-xl shadow-md hover:bg-[var(--text-light)] hover:shadow-lg hover:ring-2 hover:ring-[var(--primary-color)] hover:ring-offset-2 hover:ring-offset-[var(--prim-light)] transition-all duration-300 ease-in-out">
                     <i className="ri-bookmark-line"></i>
                   </button>
                 </div>
@@ -834,13 +812,8 @@ function Index() {
         >
           Oceanis Blog
         </span>
-        <h1
-          className="mt-2 text-5xl font-oswald font-semibold text-[var(--primary-color)] 
-                   drop-shadow-[0_3px_8px_var(--prim-light)] 
-                   [text-shadow:2px_2px_0_var(--text-color)]"
-        >
-          “Stories crafted in elegance and prestige””
-        </h1>
+        <h1 className="mt-2 text-2xl sm:text-5xl font-oswald font-semibold text-[var(--primary-color)] drop-shadow-[0_3px_8px_var(--prim-light)] [text-shadow:2px_2px_0_var(--text-color)] text-center sm:text-left mx-auto sm:mx-0 leading-snug">“Stories crafted in elegance and prestige”</h1>
+
 
         {/* Blogs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full text-left">
