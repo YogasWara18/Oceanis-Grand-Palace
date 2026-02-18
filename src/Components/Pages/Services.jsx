@@ -10,18 +10,18 @@ import service6 from "../../assets/Service6.jpg";
 import service7 from "../../assets/Service7.jpg";
 import service8 from "../../assets/Service8.jpg";
 
-import feature1 from "../../assets/feature1.png";
-import feature2 from "../../assets/feature2.png";
-import feature3 from "../../assets/feature3.png";
-import feature4 from "../../assets/feature4.png";
-import feature5 from "../../assets/feature5.png";
-import feature6 from "../../assets/feature6.png";
-import feature7 from "../../assets/feature7.png";
-import feature8 from "../../assets/feature8.png";
-import feature9 from "../../assets/feature9.png";
-import feature10 from "../../assets/feature10.png";
-import feature11 from "../../assets/feature11.png";
-import feature12 from "../../assets/feature12.png";
+import feature1 from "../../assets/Feature1.png";
+import feature2 from "../../assets/Feature2.png";
+import feature3 from "../../assets/Feature3.png";
+import feature4 from "../../assets/Feature4.png";
+import feature5 from "../../assets/Feature5.png";
+import feature6 from "../../assets/Feature6.png";
+import feature7 from "../../assets/Feature7.png";
+import feature8 from "../../assets/Feature8.png";
+import feature9 from "../../assets/Feature9.png";
+import feature10 from "../../assets/Feature10.png";
+import feature11 from "../../assets/Feature11.png";
+import feature12 from "../../assets/Feature12.png";
 
 function Services() {
   return (
