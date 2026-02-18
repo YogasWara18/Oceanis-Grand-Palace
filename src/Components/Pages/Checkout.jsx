@@ -4,34 +4,21 @@ import checkoutImg from "../../assets/Checkout-bg.jpg";
 
 import RoomsData from "../../Rooms.json";
 
-import amenitis1 from "../../assets/Amenitis1.png";
-import amenitis2 from "../../assets/Amenitis2.png";
-import amenitis3 from "../../assets/Amenitis3.png";
-import amenitis4 from "../../assets/Amenitis4.png";
-import amenitis5 from "../../assets/Amenitis5.png";
-import amenitis6 from "../../assets/Amenitis6.png";
 
-import feature1 from "../../assets/feature1.gif";
-import feature2 from "../../assets/feature2.gif";
-import feature3 from "../../assets/feature3.gif";
-import feature4 from "../../assets/feature4.gif";
-import feature5 from "../../assets/feature5.gif";
-import feature6 from "../../assets/feature6.gif";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+
 
 const Checkout = () => {
   const { id } = useParams();
+  const [showModal, setShowModal] = useState(false); 
+
   const room = RoomsData.find((room) => room.id === id);
 
   if (!room) {
     return <div className="text-center py-20 text-xl">Room not Found?</div>;
   }
 
-  const [showModal, setShowModal] = useState(false);
+  
   return (
     <>
       <div className="section-banner relative flex items-center justify-center">
@@ -169,7 +156,7 @@ const Checkout = () => {
               {room.title}
             </h3>
 
-            <div className="mt-6 space-y-3 text-sm text-[#204f5e] border-t border-[var(--secondary-color)] pt-6 font-[var(--Arimo-font)]">
+            <div className="mt-6 space-y-3 text-sm text-[var(--color-text)] border-t border-[var(--secondary-color)] pt-6 font-[var(--Arimo-font)]">
               <p className="flex justify-between">
                 <span>Check In Date:</span>
                 <span>2025-07-03</span>

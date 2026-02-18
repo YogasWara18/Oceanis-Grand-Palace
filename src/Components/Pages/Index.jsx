@@ -40,6 +40,13 @@ import blog4 from "../../assets/Blog4.png";
 import blog5 from "../../assets/Blog5.png";
 import blog6 from "../../assets/Blog6.png";
 
+import userBlog1 from "../../assets/blog-user1.png"
+import userBlog2 from "../../assets/blog-user2.png"
+import userBlog3 from "../../assets/blog-user3.png"
+import userBlog4 from "../../assets/blog-user4.png"
+import userBlog5 from "../../assets/blog-user5.png"
+import userBlog6 from "../../assets/blog-user6.png"
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -50,17 +57,9 @@ function Index() {
   const [checkOutDate, setCheckOutDate] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab] = useState("All");
 
-  const tabs = [
-    "All",
-    "Economy",
-    "Deluxe",
-    "Suite",
-    "Family",
-    "Presidential",
-    "Luxury",
-  ];
+  
 
   const filteredRooms =
     activeTab === "All"
@@ -862,7 +861,7 @@ function Index() {
               {/* Author & Date */}
               <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
                 <img
-                  src={blog1}
+                  src={userBlog1}
                   alt="author avatar"
                   className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
                 />
@@ -918,7 +917,7 @@ function Index() {
               {/* Author & Date */}
               <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
                 <img
-                  src={blog2}
+                  src={userBlog2}
                   alt="author avatar"
                   className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
                 />
@@ -974,7 +973,7 @@ function Index() {
               {/* Author & Date */}
               <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
                 <img
-                  src={blog3}
+                  src={userBlog3}
                   alt="author avatar"
                   className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
                 />
@@ -1030,7 +1029,7 @@ function Index() {
               {/* Author & Date */}
               <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
                 <img
-                  src={blog4}
+                  src={userBlog4}
                   alt="author avatar"
                   className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
                 />
@@ -1086,7 +1085,7 @@ function Index() {
               {/* Author & Date */}
               <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
                 <img
-                  src={blog5}
+                  src={userBlog5}
                   alt="author avatar"
                   className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
                 />
@@ -1142,7 +1141,7 @@ function Index() {
               {/* Author & Date */}
               <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
                 <img
-                  src={blog6}
+                  src={userBlog6}
                   alt="author avatar"
                   className="w-7 h-7 rounded-full object-cover border border-[var(--primary-color)] shadow-sm"
                 />

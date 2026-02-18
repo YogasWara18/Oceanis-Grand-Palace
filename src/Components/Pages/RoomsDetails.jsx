@@ -528,9 +528,8 @@ const RoomsDetails = () => {
                   {/* Image Slider */}
                   <div className="relative rounded-t-2xl border-b border-[var(--prim-light)]">
                     <Swiper
-                      modules={[Pagination, Navigation]}
+                      modules={[Pagination]}
                       pagination={{ clickable: true }}
-                      navigation={true}
                       className="w-full h-[220px] sm:h-[240px] md:h-[260px]"
                     >
                       {room.photos.map((photo, index) => (
