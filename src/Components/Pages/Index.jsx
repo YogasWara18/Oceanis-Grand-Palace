@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import service1 from "../../assets/Service1.png";
-import service2 from "../../assets/Service2.png";
-import service3 from "../../assets/Service3.png";
-import service4 from "../../assets/Service4.png";
+import service1 from "../../../public/Services/Service1.png";
+import service2 from "../../../public/Services/Service2.png";
+import service3 from "../../../public/Services/Service3.png";
+import service4 from "../../../public/Services/Service4.png";
+
 
 import feature1 from "../../assets/Feature1.png";
 import feature2 from "../../assets/Feature2.png";
