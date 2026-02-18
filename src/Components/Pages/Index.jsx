@@ -9,12 +9,12 @@ import service2 from "../../assets/Service2.png";
 import service3 from "../../assets/Service3.png";
 import service4 from "../../assets/Service4.png";
 
-import feature1 from "../../assets/feature1.png";
-import feature2 from "../../assets/feature2.png";
-import feature3 from "../../assets/feature3.png";
-import feature4 from "../../assets/feature4.png";
-import feature5 from "../../assets/feature5.png";
-import feature6 from "../../assets/feature6.png";
+import feature1 from "../../assets/Feature1.png";
+import feature2 from "../../assets/Feature2.png";
+import feature3 from "../../assets/Feature3.png";
+import feature4 from "../../assets/Feature4.png";
+import feature5 from "../../assets/Feature5.png";
+import feature6 from "../../assets/Feature6.png";
 
 import about1 from "../../assets/About1.png";
 import about2 from "../../assets/About2.png";
