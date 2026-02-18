@@ -84,20 +84,28 @@ function Blog() {
                 image: blog1,
                 date: "24.09.2025",
                 title: "Embrace the Ocean Breeze: Your Next Luxury Escape",
+                author: "Paul T.",
+                authorImage: userBlog1,
+                description:
+                  "Discover why the serene beauty of the beach is the perfect setting for your next unforgettable journey.",
               },
               {
                 image: blog2,
                 date: "12.10.2025",
                 title: "Sunset Serenity: A Journey into Tranquility",
+                author: "Sophia L.",
+                authorImage: userBlog2,
+                description:
+                  "Experience the calming embrace of twilight as the sun dips below the horizon, painting the sky with serenity.",
               },
             ].map((item, index) => (
               <div
                 key={index}
                 className="bg-[var(--white-color)] rounded-[24px] overflow-hidden 
-                     border border-[var(--primary-color)] 
-                     shadow-inner transition-all duration-500 ease-in-out 
-                     hover:scale-[1.02] hover:shadow-[0_10px_35px_var(--primary-color)] 
-                     group backdrop-blur-lg"
+               border border-[var(--primary-color)] 
+               shadow-inner transition-all duration-500 ease-in-out 
+               hover:scale-[1.02] hover:shadow-[0_10px_35px_var(--primary-color)] 
+               group backdrop-blur-lg"
               >
                 {/* Image */}
                 <div className="overflow-hidden rounded-t-[20px]">
@@ -105,8 +113,8 @@ function Blog() {
                     src={item.image}
                     alt="Blog"
                     className="w-full h-[320px] object-cover transform 
-                         transition-transform duration-500 
-                         group-hover:scale-110"
+                   transition-transform duration-500 
+                   group-hover:scale-110"
                   />
                 </div>
 
@@ -115,13 +123,13 @@ function Blog() {
                   {/* Author & Date */}
                   <div className="flex items-center text-sm text-gray-500 gap-3 mb-5">
                     <img
-                      src={userBlog1}
+                      src={item.authorImage}
                       alt="Author"
                       className="w-7 h-7 rounded-full object-cover 
-                           border border-[var(--primary-color)] shadow-sm"
+                     border border-[var(--primary-color)] shadow-sm"
                     />
                     <span className="font-semibold text-[var(--text-color)]">
-                      Paul T.
+                      {item.author}
                     </span>
                     <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
                     <span className="italic text-gray-400">{item.date}</span>
@@ -130,7 +138,7 @@ function Blog() {
                   {/* Title */}
                   <h3
                     className="font-oswald font-semibold text-xl text-[var(--black-color)] 
-                         mb-3 leading-snug [text-shadow:1px_1px_0_var(--text-light)]"
+                   mb-3 leading-snug [text-shadow:1px_1px_0_var(--text-light)]"
                   >
                     {item.title}
                   </h3>
@@ -138,29 +146,29 @@ function Blog() {
                   {/* Description */}
                   <p
                     className="text-gray-700 text-sm mb-5 leading-relaxed 
-                         bg-transparent px-4 py-3 rounded-xl 
-                         shadow-[0_0_15px_var(--primary-color)]"
+                   bg-transparent px-4 py-3 rounded-xl 
+                   shadow-[0_0_15px_var(--primary-color)]"
                   >
-                    Discover why the serene beauty of the beach is the perfect
-                    setting for your next unforgettable journey.
+                    {item.description}
                   </p>
 
                   {/* Read More */}
                   <a
                     href="#"
                     className="text-sm font-semibold text-[var(--primary-color)] 
-                         inline-flex items-center group"
+                   inline-flex items-center group"
                   >
                     Read More
                     <span
                       className="ml-1 group-hover:translate-x-1 
-                               transition-transform ri-arrow-right-s-line"
+                     transition-transform ri-arrow-right-s-line"
                     ></span>
                   </a>
                 </div>
               </div>
             ))}
           </div>
+
           {/* Desc */}
           <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             {/* Blog Description */}
@@ -203,7 +211,6 @@ function Blog() {
       </div>
 
       {/* Blog Grid */}
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full text-left">
         {/* Card 1 */}
         <div
@@ -822,7 +829,7 @@ function Blog() {
               className="font-oswald font-semibold text-xl text-[var(--black-color)] 
                    mb-3 leading-snug [text-shadow:1px_1px_0_var(--text-light)]"
             >
-             Oceanis Grand Palace: A Global Luxury Destination
+              Oceanis Grand Palace: A Global Luxury Destination
             </h3>
 
             {/* Description */}
@@ -831,7 +838,8 @@ function Blog() {
                    bg-transparent px-4 py-3 rounded-xl 
                    shadow-[0_0_15px_var(--primary-color)]"
             >
-              Positioning Oceanis as an international icon that unites comfort, art, and prestige.
+              Positioning Oceanis as an international icon that unites comfort,
+              art, and prestige.
             </p>
 
             {/* Read More Button */}
@@ -845,6 +853,54 @@ function Blog() {
           </div>
         </div>
       </div>
+
+      <section className="bg-[#f9f9f9] py-[150px] w-full">
+        <div className="w-full lg:w-[95%] mx-auto px-8 md:mx-14 bg-white rounded-[20px] shadow-xl relative z-[10] text-center py-20">
+          <span
+            className="rounded-full mt-6 px-8 py-3 font-bricolage tracking-wider text-sm uppercase 
+                   bg-[var(--prim-light)] text-[var(--text-color)] shadow-md 
+                   border border-[var(--text-light)]"
+          >
+            Newsletter
+          </span>
+          <h2
+            className="text-3xl sm:text-4xl font-bold font-[var(--Oswald-font)] mt-4 text-transparent bg-clip-text
+                      bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] 
+                     drop-shadow-[0_3px_8px_var(--prim-light)] 
+                     [text-shadow:2px_2px_0_var(--text-color)]"
+          >
+            Subscribe Our Newsletter
+          </h2>
+
+          <form
+            className="max-w-xl mx-auto mt-5 flex items-center justify-between 
+             bg-[var(--prim-light)] rounded-full overflow-hidden 
+             p-2 border border-[var(--primary-color)] 
+             hover:shadow-[0_0_25px_var(--primary-color)] 
+             transition-all duration-500 ease-in-out"
+          >
+            {/* Input */}
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              className="flex-1 px-4 py-2 bg-transparent outline-none 
+               text-[var(--black-color)] font-arimo text-sm 
+               placeholder:text-gray-400"
+            />
+
+            {/* Button */}
+            <button
+              type="submit"
+              className="bg-[var(--text-light)] to-[var(--secondary-color)] 
+               text-[var(--white-color)] font-oswald font-semibold 
+               px-8 py-2 rounded-full transition-all duration-500 ease-in-out 
+               hover:scale-[1.05]"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
     </>
   );
 }
