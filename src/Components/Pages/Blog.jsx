@@ -1,32 +1,33 @@
 import React from "react";
 
-import blog1 from "../../assets/Blog1.png";
-import blog2 from "../../assets/Blog2.png";
-import blog3 from "../../assets/Blog3.png";
-import blog4 from "../../assets/Blog4.png";
-import blog5 from "../../assets/Blog5.png";
-import blog6 from "../../assets/Blog6.png";
-import blog7 from "../../assets/Blog7.png";
-import blog8 from "../../assets/Blog8.png";
-import blog9 from "../../assets/Blog9.png";
-import blog10 from "../../assets/Blog10.png";
-import blog11 from "../../assets/Blog11.png";
-import blog12 from "../../assets/Blog12.png";
+import blog1 from "../../../public/Blog/Blog1.png";
+import blog2 from "../../../public/Blog/Blog2.png";
+import blog3 from "../../../public/Blog/Blog3.png";
+import blog4 from "../../../public/Blog/Blog4.png";
+import blog5 from "../../../public/Blog/Blog5.png";
+import blog6 from "../../../public/Blog/Blog6.png";
+import blog7 from "../../../public/Blog/Blog7.png";
+import blog8 from "../../../public/Blog/Blog8.png";
+import blog9 from "../../../public/Blog/Blog9.png";
+import blog10 from "../../../public/Blog/Blog10.png";
+import blog11 from "../../../public/Blog/Blog11.png";
+import blog12 from "../../../public/Blog/Blog12.png";
 
-import userBlog1 from "../../assets/blog-user1.png";
-import userBlog2 from "../../assets/blog-user2.png";
-import userBlog3 from "../../assets/blog-user3.png";
-import userBlog4 from "../../assets/blog-user4.png";
-import userBlog5 from "../../assets/blog-user5.png";
-import userBlog6 from "../../assets/blog-user6.png";
-import userBlog7 from "../../assets/blog-user7.png";
-import userBlog8 from "../../assets/blog-user8.png";
-import userBlog9 from "../../assets/blog-user9.png";
-import userBlog10 from "../../assets/blog-user10.png";
-import userBlog11 from "../../assets/blog-user11.png";
-import userBlog12 from "../../assets/blog-user12.png";
+import userBlog1 from "../../../public/UserBlog/blog-user1.png"
+import userBlog2 from "../../../public/UserBlog/blog-user2.png"
+import userBlog3 from "../../../public/UserBlog/blog-user3.png"
+import userBlog4 from "../../../public/UserBlog/blog-user4.png"
+import userBlog5 from "../../../public/UserBlog/blog-user5.png"
+import userBlog6 from "../../../public/UserBlog/blog-user6.png"
+import userBlog7 from "../../../public/UserBlog/blog-user7.png"
+import userBlog8 from "../../../public/UserBlog/blog-user8.png"
+import userBlog9 from "../../../public/UserBlog/blog-user9.png"
+import userBlog10 from "../../../public/UserBlog/blog-user10.png"
+import userBlog11 from "../../../public/UserBlog/blog-user11.png"
+import userBlog12 from "../../../public/UserBlog/blog-user12.png"
 
-import blogImg from "../../assets/Blog-image.jpg";
+
+import blogImg from "../../../public/Blog-image.jpg";
 
 function Blog() {
   return (

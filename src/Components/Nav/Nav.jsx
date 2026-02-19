@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import bookmark from "../../../src/assets/Bookmark.png";
+import bookmark from "../../../public/Bookmark.png";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";

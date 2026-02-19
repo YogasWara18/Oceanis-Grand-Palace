@@ -1,27 +1,27 @@
 import React from "react";
-import serviceImg from "../../assets/Service-image.jpg";
+import serviceImg from "../../../public/Service-image.jpg";
 
-import service1 from "../../assets/Service1.png";
-import service2 from "../../assets/Service2.png";
-import service3 from "../../assets/Service3.png";
-import service4 from "../../assets/Service4.png";
-import service5 from "../../assets/Service5.jpg";
-import service6 from "../../assets/Service6.jpg";
-import service7 from "../../assets/Service7.jpg";
-import service8 from "../../assets/Service8.jpg";
+import service1 from "../../../public/Services/Service1.png";
+import service2 from "../../../public/Services/Service2.png";
+import service3 from "../../../public/Services/Service3.png";
+import service4 from "../../../public/Services/Service4.png";
+import service5 from "../../../public/Services/Service5.png";
+import service6 from "../../../public/Services/Service6.png";
+import service7 from "../../../public/Services/Service7.png";
+import service8 from "../../../public/Services/Service8.png";
 
-import feature1 from "../../assets/Feature1.png";
-import feature2 from "../../assets/Feature2.png";
-import feature3 from "../../assets/Feature3.png";
-import feature4 from "../../assets/Feature4.png";
-import feature5 from "../../assets/Feature5.png";
-import feature6 from "../../assets/Feature6.png";
-import feature7 from "../../assets/Feature7.png";
-import feature8 from "../../assets/Feature8.png";
-import feature9 from "../../assets/Feature9.png";
-import feature10 from "../../assets/Feature10.png";
-import feature11 from "../../assets/Feature11.png";
-import feature12 from "../../assets/Feature12.png";
+import feature1 from "../../../public/Feature/Feature1.png";
+import feature2 from "../../../public/Feature/Feature2.png";
+import feature3 from "../../../public/Feature/Feature3.png";
+import feature4 from "../../../public/Feature/Feature4.png";
+import feature5 from "../../../public/Feature/Feature5.png";
+import feature6 from "../../../public/Feature/Feature6.png";
+import feature7 from "../../../public/Feature/Feature7.png";
+import feature8 from "../../../public/Feature/Feature8.png";
+import feature9 from "../../../public/Feature/Feature9.png";
+import feature10 from "../../../public/Feature/Feature10.png";
+import feature11 from "../../../public/Feature/Feature11.png";
+import feature12 from "../../../public/Feature/Feature12.png";
 
 function Services() {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import roomsImg from "../../assets/Rooms-bg.jpg";
+import roomsImg from "../../../public/Rooms-bg.jpg";
 
 import RoomsData from "../../Rooms.json";
 

@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import socialIcon1 from "../../assets/Youtube.png";
-import socialIcon2 from "../../assets/Instagram.png";
-import socialIcon3 from "../../assets/Facebook.png";
-import socialIcon4 from "../../assets/X.png";
+import socialIcon1 from "../../../public/Media/Facebook.png";
+import socialIcon2 from "../../../public/Media/Youtube.png";
+import socialIcon3 from "../../../public/Media/Instagram.png";
+import socialIcon4 from "../../../public/Media/X.png";
 
 function Footer() {
   return (

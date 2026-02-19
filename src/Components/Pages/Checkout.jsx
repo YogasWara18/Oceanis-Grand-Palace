@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import checkoutImg from "../../assets/Checkout-bg.jpg";
+import checkoutImg from "../../../public/Checkout-bg.jpg";
 
 import RoomsData from "../../Rooms.json";
 

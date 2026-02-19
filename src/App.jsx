@@ -10,11 +10,13 @@ import RoomsDetails from './Components/Pages/RoomsDetails';
 import Checkout from './Components/Pages/Checkout';
 import Blog from './Components/Pages/Blog';
 import Contact from './Components/Pages/Contact';
+import ScrollToTop from './Components/Nav/ScrollToTop';
 
 function App() {
   return (
     <Router>
       <Nav />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />

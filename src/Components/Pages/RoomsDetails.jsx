@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import roomsImg from "../../assets/RoomDetails-bg.jpg";
+import roomsImg from "../../../public/RoomDetails-bg.jpg";
 
 import RoomsData from "../../Rooms.json";
 
-import amenitis1 from "../../assets/Amenitis1.png";
-import amenitis2 from "../../assets/Amenitis2.png";
-import amenitis3 from "../../assets/Amenitis3.png";
-import amenitis4 from "../../assets/Amenitis4.png";
-import amenitis5 from "../../assets/Amenitis5.png";
-import amenitis6 from "../../assets/Amenitis6.png";
+import amenitis1 from "../../../public/Amenities/Amenitis1.png";
+import amenitis2 from "../../../public/Amenities/Amenitis2.png";
+import amenitis3 from "../../../public/Amenities/Amenitis3.png";
+import amenitis4 from "../../../public/Amenities/Amenitis4.png";
+import amenitis5 from "../../../public/Amenities/Amenitis5.png";
+import amenitis6 from "../../../public/Amenities/Amenitis6.png";
 
-import feature1 from "../../assets/feature1.gif";
-import feature2 from "../../assets/feature2.gif";
-import feature3 from "../../assets/feature3.gif";
-import feature4 from "../../assets/feature4.gif";
-import feature5 from "../../assets/feature5.gif";
-import feature6 from "../../assets/feature6.gif";
+import feature1 from "../../../public/BookDetailsGIF/Feature1.gif";
+import feature2 from "../../../public/BookDetailsGIF/Feature2.gif";
+import feature3 from "../../../public/BookDetailsGIF/Feature3.gif";
+import feature4 from "../../../public/BookDetailsGIF/Feature4.gif";
+import feature5 from "../../../public/BookDetailsGIF/Feature5.gif";
+import feature6 from "../../../public/BookDetailsGIF/Feature6.gif";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";

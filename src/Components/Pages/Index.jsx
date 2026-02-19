@@ -10,43 +10,45 @@ import service3 from "../../../public/Services/Service3.png";
 import service4 from "../../../public/Services/Service4.png";
 
 
-import feature1 from "../../assets/Feature1.png";
-import feature2 from "../../assets/Feature2.png";
-import feature3 from "../../assets/Feature3.png";
-import feature4 from "../../assets/Feature4.png";
-import feature5 from "../../assets/Feature5.png";
-import feature6 from "../../assets/Feature6.png";
+import feature1 from "../../../public/Feature/Feature1.png";
+import feature2 from "../../../public/Feature/Feature2.png";
+import feature3 from "../../../public/Feature/Feature3.png";
+import feature4 from "../../../public/Feature/Feature4.png";
+import feature5 from "../../../public/Feature/Feature5.png";
+import feature6 from "../../../public/Feature/Feature6.png";
 
-import about1 from "../../assets/About1.png";
-import about2 from "../../assets/About2.png";
-import about3 from "../../assets/About3.png";
-import about4 from "../../assets/About4.png";
+
+import about1 from "../../../public/About/About1.png";
+import about2 from "../../../public/About/About2.png";
+import about3 from "../../../public/About/About3.png";
+import about4 from "../../../public/About/About4.png";
+
 
 import RoomsData from "../../Rooms.json";
 
-import aboutImg2 from "../../assets/About-Image2.png";
+import aboutImg2 from "../../../public/About/About-image2.png";
 
-import avatar1 from "../../assets/Review1.png";
-import avatar2 from "../../assets/Review2.png";
-import avatar3 from "../../assets/Review3.png";
-import avatar4 from "../../assets/Review4.png";
-import avatar5 from "../../assets/Review5.png";
-import avatar6 from "../../assets/Review6.png";
-import avatar7 from "../../assets/Review7.png";
+import avatar1 from "../../../public/ReviewUser/Review1.png";
+import avatar2 from "../../../public/ReviewUser/Review2.png";
+import avatar3 from "../../../public/ReviewUser/Review3.png";
+import avatar4 from "../../../public/ReviewUser/Review4.png";
+import avatar5 from "../../../public/ReviewUser/Review5.png";
+import avatar6 from "../../../public/ReviewUser/Review6.png";
+import avatar7 from "../../../public/ReviewUser/Review7.png";
 
-import blog1 from "../../assets/Blog1.png";
-import blog2 from "../../assets/Blog2.png";
-import blog3 from "../../assets/Blog3.png";
-import blog4 from "../../assets/Blog4.png";
-import blog5 from "../../assets/Blog5.png";
-import blog6 from "../../assets/Blog6.png";
+import blog1 from "../../../public/Blog/Blog1.png";
+import blog2 from "../../../public/Blog/Blog2.png";
+import blog3 from "../../../public/Blog/Blog3.png";
+import blog4 from "../../../public/Blog/Blog4.png";
+import blog5 from "../../../public/Blog/Blog5.png";
+import blog6 from "../../../public/Blog/Blog6.png";
 
-import userBlog1 from "../../assets/blog-user1.png"
-import userBlog2 from "../../assets/blog-user2.png"
-import userBlog3 from "../../assets/blog-user3.png"
-import userBlog4 from "../../assets/blog-user4.png"
-import userBlog5 from "../../assets/blog-user5.png"
-import userBlog6 from "../../assets/blog-user6.png"
+import userBlog1 from "../../../public/UserBlog/blog-user1.png"
+import userBlog2 from "../../../public/UserBlog/blog-user2.png"
+import userBlog3 from "../../../public/UserBlog/blog-user3.png"
+import userBlog4 from "../../../public/UserBlog/blog-user4.png"
+import userBlog5 from "../../../public/UserBlog/blog-user5.png"
+import userBlog6 from "../../../public/UserBlog/blog-user6.png"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";

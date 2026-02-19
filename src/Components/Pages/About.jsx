@@ -1,12 +1,12 @@
 import React from "react";
 import CountUp from "react-countup";
-import authorImg from "../../assets/about.jpg";
-import signatureImg from "../../assets/Signature.png";
+import authorImg from "../../../public/About/about.jpg";
+import signatureImg from "../../../public/Signature.png";
 
-import heroImg from "../../assets/Hero-about2.png";
+import heroImg from "../../../public/Hero-about2.png";
 import { Link } from "react-router-dom";
 
-import sectionImg from "../../assets/Section-about.png";
+import sectionImg from "../../../public/Section-about.png";
 
 function About() {
   return (
